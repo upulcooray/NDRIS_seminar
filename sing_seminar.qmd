@@ -1,0 +1,506 @@
+---
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+format: 
+  revealjs:
+    theme: [moon, css/custom.scss]
+    preview-links: auto
+    footer: "Upul Cooray"
+    auto-animate-easing: ease-in-out
+    auto-animate-unmatched: true
+    auto-animate-duration: 0.8
+---
+
+![](img/causal.png){.absolute top="70%" right="-1%" width="475"}
+
+::: {.ti .absolute top="20%" right="0%"}
+How I Develop Intuition for
+
+[*Causal Inference*]{.purple}
+:::
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \| My Work \| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+```{r}
+#| include: false
+library(kableExtra)
+library(tidyverse)
+```
+
+![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+
+
+<!------------------------------------Slide 2---------------------------------->
+##  {auto-animate="true"} 
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+About Me [\| My Work \| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+
+![](img/pic.png){.absolute top="15%" left="-1%" width="200"}
+
+::: {.absolute data-id="me" style="left:-1%;top:45%; font-weight:bold"}
+ABOUT [ME]{.purple}
+:::
+
+
+::: {.absolute style="left:25%;top:15%;"}
+-   A dentist
+
+-   Graduated from University of Peradeniya, Sri Lanaka (2011)
+
+-   Clinical dentist \~ 5 Years
+
+-   MSc Dental Public Health at UCL (2015-2016)
+
+-   PhD Dental Public Health at Tohoku University, Japan (2018-2022)
+:::
+
+
+<!------------------------------------Slide 3---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+About Me [\| My Work \| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+
+![](img/pic.png){.absolute top="15%" left="-1%" width="200"}
+
+::: {.absolute data-id="me" style="left:-4%;top:45%; font-weight:bold"}
+MY [INTERESTS]{.purple}
+
+(CONCEPTS)
+:::
+
+
+::: {.absolute style="left:25%;top:18%;"}
+-   Social Determinants of Health
+
+-   Health Inequalities
+
+-   Common Risk Factors
+
+-   Evaluation of Health Policies
+
+-   Reproducible research
+:::
+
+<!------------------------------------Slide 4---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+About Me [\| My Work \| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+
+![](img/pic.png){.absolute top="15%" left="-1%" width="200"}
+
+::: {data-id="me" .absolute style="left:-4%;top:45%; font-weight:bold"}
+MY [INTERESTS]{.purple}
+
+(METHODS)
+:::
+
+
+::: {.absolute style="left:25%;top:18%;"}
+-   Econometric methods for causal inference
+
+-   Modern causal inference frameworks for question based analytical approach
+
+-   Target Trial Emulations
+
+-   Intersection between machine learning and causal inference
+
+-   Doubly-robust estimators (TMLE, SDR)
+:::
+
+<!------------------------------------Slide 5---------------------------------->
+##  {auto-animate="true"}
+
+::: { .absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+About Me [\| My Work \| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+![](img/pic.png){.absolute top="15%" left="-1%" width="200"}
+
+::: {.absolute  data-id="me" style="left:-4%;top:45%; font-weight:bold"}
+MY [INTERESTS]{.purple}
+
+(OTHER)
+:::
+
+::: {.absolute style="left:25%;top:18%;"}
+-   R programming and functional programming in general
+
+-   Learning new concepts (almost anything)
+
+-   Teaching
+
+-   Badminton
+
+-   Playing with my kids
+:::
+
+<!------------------------------------Slide 6---------------------------------->
+## {auto-animate="true"}
+
+::: { .absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+::: {.absolute style="right:-17%;top:50%; font-weight:bold"}
+[PREVIOUS]{.green} WORK
+
+(Econometric Methods)
+:::
+
+![](img/rdabs.png){data-id="rd" .absolute top="0%" left="-11%" width="900"}
+
+
+::: notes
+This is where my interest on econometric methods and causal inference in general sparked I think econometric methods are very good in accounting for unmeasured confounding But difficult to find data and proper use cases with epidemiological survey data, Eg: finding appropriate strong IV, Data to simulate a synthetic control
+:::
+
+<!------------------------------------Slide 7---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+::: {.absolute style="right:-17%;top:50%; font-weight:bold"}
+[PREVIOUS]{.green} WORK
+
+(Econometric Methods)
+:::
+
+![](img/rd.png){data-id="rd" .absolute top="0%" left="-11%" width="900"}
+
+<br><br>
+
+![](img/rdplot.png){.absolute left="-11%" width="900"}
+
+
+::: notes
+This is where my interest on econometric methods and causal inference in general sparked I think econometric methods are very good in accounting for unmeasured confounding But difficult to find data and proper use cases with epidemiological survey data, Eg: finding appropriate strong IV, Data to simulate a synthetic control
+:::
+
+
+<!------------------------------------Slide 8---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+::: {.absolute data-id="previous" style="right:-10%;top:50%; font-weight:bold"}
+[PREVIOUS]{.green} WORK
+
+(Machine Learning)
+:::
+
+![](img/ml1.png){.absolute data-id="ml1" left="-11%" top="-1%" width="900"}
+
+![](img/ml2.png){.absolute left="-11%" width="900" top="40%"}
+
+
+::: notes
+I got bored during the initial lock down period of the pandemic so I wanted to understand little bit about machine learning and started a toy project to predict tooth loss using survey data and I ended up publishing my results in SSM.
+
+and then I used similar methods to work on a project with a Japanese collegeue to predict the fall risk among older adults.
+:::
+
+<!------------------------------------Slide 9---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+::: {.absolute data-id="previous" style="right:-10%;top:50%; font-weight:bold"}
+[PREVIOUS]{.green} WORK
+
+(Machine Learning)
+:::
+
+
+![](img/ml1-2.png){.absolute data-id="ml1" top="-1%" width="900" left="-11%"}
+
+![](img/shap1.png){.absolute top="20%" width="900" left="-11%"}
+
+
+::: notes
+In these studies I tried to adopt explainable ML methods to get some meaningful interpretations out of machine learning predictions I was working on stata prior to these project but I learn a lot of python just to implement these two studies.
+However, currently my workflow is exclusively based on R.
+:::
+
+
+<!------------------------------------Slide 10---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+
+::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
+[CURRENT]{.red} WORK
+
+(Causal inference + Machine Learning)
+:::
+
+![](img/accepted.png){.absolute top="18%" left="-11%" width="900"}
+
+<br> <br>
+
+
+::: notes
+:::
+
+<!------------------------------------Slide 11---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
+[CURRENT]{.red} WORK (Intuition)
+:::
+
+![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+
+<br> <br>
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+::: {.absolute style="left:-10%;top:18%;"}
+-   We usually default to a "**model-based**" analytic approach in oral epidemiological studies
+
+    [E.g.:]{.f-25}
+
+    -   [Binary outcome - run a logistic regression]{.f-25}
+    -   [Time-to-event outcome - Cox-regression]{.f-25}
+:::
+
+::: notes
+:::
+
+<!------------------------------------Slide 12---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
+[CURRENT]{.red} WORK (Intuition)
+
+[Some limitations of model based approaches]{.blue .f-25}
+:::
+
+![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+
+<br> <br>
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+::: {.absolute .incremental .semi-fade-out style="left:-10%;top:18%;"}
+-   Regression coefficients often do not represent well-defined effects <br> [Hernán MA. The hazards of hazard ratios. Epidemiology. 2010;21(1):13-15]{.f-20}
+
+-   Modelling assumptions used are rarely correct
+
+-   Regression models cannot correctly handle time-dependent feedback among confounders, treatment, and the outcome <br> [Robins JM. Hernán MA. Causal Inference: What If]{.f-20}
+
+-   Model-first approaches fail to account for the variance induced during model selection <br> [Smith G. Step away from step wise. J Big Data. 2018;5(1):1-12]{.f-20}
+:::
+
+::: notes
+:::
+
+<!------------------------------------Slide 13---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+
+::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
+[CURRENT]{.red} WORK (Intuition)
+
+:::
+
+
+::: {.absolute style="left:-10%;top:18%;text-align:center"}
+A potential solution would be 
+
+**"Question Based"** approach 
+:::
+
+
+
+
+::: notes
+:::
+
+<!------------------------------------Slide 14---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
+[CURRENT]{.red} WORK (Intuition for the methods)
+:::
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+
+<br><br><br>
+
+::: columns
+::: {.column width="40%"}
+```{r}
+#| echo: false
+set.seed(1112)
+tibble(i= c(paste0(1:5), "...", "n"),
+      X= c(sample(1:10, 5,T) %>% paste0(), "...", "6"),
+      A= c(sample(0:1, 5,T) %>% paste0(), "...", "0"),
+      Y= c(sample(2:8, 5,T) %>% paste0(), "...", "3"),
+      ) %>% 
+  kableExtra::kable(caption = "Real data") %>% 
+  kable_styling(font_size = 30)
+
+```
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+
+set.seed(1112)
+tibble(i= c(paste0(1:5), "...", "n"),
+      X= c(sample(1:10, 5,T) %>% paste0(), "...", "6"),
+      A= c(sample(0:1, 5,T) %>% paste0(), "...", "0"),
+      Y= c(sample(2:8, 5,T) %>% paste0(), "...", "3"),
+      `Y(0)`= case_when(A=="0" ~ Y, A=="..." ~ Y, T~ "NA"),
+      `Y(1)`= case_when(A=="1" ~ Y, A=="..." ~ Y, T~ "NA"),
+      ) %>% select(-Y) %>% 
+  kableExtra::kable(caption = "Causal model") %>% 
+  kable_styling(font_size = 30)
+
+```
+:::
+:::
+
+
+::: notes
+:::
+
+
+<!------------------------------------Slide 15---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+
+
+::: notes
+:::
+
+<!------------------------------------Slide 16---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+
+
+::: notes
+:::
+
+<!------------------------------------Slide 17---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+
+<!------------------------------------Slide 18---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+
+
+::: notes
+:::
+
+<!------------------------------------Slide 19---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+
+::: notes
+:::
+
+<!------------------------------------Slide 20---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+
+::: notes
+:::

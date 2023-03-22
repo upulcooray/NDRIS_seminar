@@ -1,0 +1,134 @@
+/*-- scss:defaults --*/
+
+$body-bg: #c1d7f5;
+$body-color: #1a1a1f;
+$link-color: #0e59c2;
+$presentation-heading-color: #140530;
+$code-color: #cc0000;
+$code-block-bg: #ded9ca;
+$code-block-border-color: #000000;
+
+/*-- scss:rules --*/
+
+.reveal .slide-number {
+  color: $link-color;
+}
+
+.reveal .footer {
+  font-size: 0.35em !important;
+  text-align: center !important;
+}
+
+.reveal .slides section .fragment.semi-fade-out {
+	opacity: 1;
+	visibility: inherit;
+
+	&.visible {
+		opacity: 0.25;
+		visibility: inherit;
+	}
+}
+
+.sectionhead {
+  font-size: 1em;
+  text-align: center;
+  color: $presentation-heading-color;
+  font-family: $presentation-heading-font;
+  background-color: $body-bg;
+  margin: 1px;
+  padding: 2px 2px 2px 2px;
+  width: 350px;
+  border-left: 10px solid;
+  border-color: $code-color;
+}
+
+.sectionhead2 {
+  font-size: 0.5em;
+  text-align: center;
+  color: $presentation-heading-color;
+  font-family: $presentation-heading-font;
+  background-color: $body-bg;
+  margin: 2px;
+  padding: 2px 1px 1px 1px;
+  width: fit-content;
+  border-left: 8px solid;
+}
+
+.blackbox {
+  color: #000000;
+  background-color: transparent;
+  margin: 1px;
+  padding: 5px 2px 5px 2px;
+  border: 2px solid;
+}
+
+.redbox {
+  color: #da291c;
+  background-color: transparent;
+  margin: 1px;
+  padding: 5px 2px 5px 2px;
+  border: 2px solid;
+}
+
+
+.ti {
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+
+.blue       { color:   #005EB8 }
+.green      { color:   #009639 }
+.pink       { color:   #AE2573 }
+.red        { color:   #da291c }
+.warmyellow { color:   #FFB81C }
+.grey       {color:    #5D6D7E }
+.purple     {color:    #7D3C98 }
+
+
+  hr {
+    content:            none;
+    display:            block;
+    border:             none;
+    background-color:   #7D3C98;
+    height:             0.1em;
+    margin: 5px auto;
+
+  }
+
+
+
+/*font sizes*/
+
+
+.f-12{
+  font-size: 12px;
+}
+
+.f-15{
+  font-size: 15px;
+}
+
+
+
+.f-18{
+  font-size: 18px;
+}
+
+.f-20{
+  font-size: 20px;
+}
+
+.f-22{
+  font-size: 22px;
+}
+
+
+  
+.f-25{
+  font-size: 25px;
+}
+
