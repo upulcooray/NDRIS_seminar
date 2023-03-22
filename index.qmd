@@ -363,6 +363,13 @@ However, currently my workflow is exclusively based on R.
 A potential solution would be 
 
 **"Question Based"** approach 
+
+:::
+
+:::{.absolute style="left:-10%;top:50%" .f-25}
+PetersenML,vanderLaanMJ.Causalmodelsandlearningfromdata:integratingcausalmodelingand
+statistical estimation. Epidemiology. 2014;25(3):418-426. 
+
 :::
 
 
@@ -372,6 +379,62 @@ A potential solution would be
 :::
 
 <!------------------------------------Slide 14---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+
+::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
+[CURRENT]{.red} WORK (Intuition)
+
+:::
+
+
+::: {.absolute style="left:-10%;top:18%;text-align:center"}
+
+Potential outcome/ Counterfactual framework 
+
+Asking **"what if"** questions 
+
+:::
+
+
+::: notes
+:::
+
+<!-----------------------------------Slide 15---------------------------------->
+##  {auto-animate="true"}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+
+::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
+[CURRENT]{.red} WORK (Intuition)
+
+:::
+
+
+::: {.absolute style="left:-10%;top:18%;text-align:center"}
+
+Key Asumptions
+
+:::
+
+
+::: notes
+:::
+
+<!-----------------------------------Slide 15---------------------------------->
 ##  {auto-animate="true"}
 
 ::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
@@ -437,6 +500,19 @@ tibble(i= c(paste0(1:5), "...", "n"),
 :::
 :::
 
+![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+
+::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
+[CURRENT]{.red} WORK (Intuition)
+
+:::
+
+
+::: {.absolute style="left:-10%;top:18%;text-align:center"}
+
+Limitations of conventional approach
+
+:::
 
 
 ::: notes
@@ -451,6 +527,19 @@ tibble(i= c(paste0(1:5), "...", "n"),
 :::
 :::
 
+![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+
+::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
+[CURRENT]{.red} WORK (Intuition)
+
+:::
+
+
+::: {.absolute style="left:-10%;top:18%;text-align:center"}
+
+methods to overcomes above limitations
+
+:::
 
 
 ::: notes
@@ -465,6 +554,23 @@ tibble(i= c(paste0(1:5), "...", "n"),
 :::
 :::
 
+![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+
+::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
+[CURRENT]{.red} WORK (Intuition)
+
+:::
+
+
+::: {.absolute style="left:-10%;top:18%;text-align:center"}
+
+Examples from my work
+
+:::
+
+
+::: notes
+:::
 
 <!------------------------------------Slide 18---------------------------------->
 ##  {auto-animate="true"}
@@ -475,18 +581,45 @@ tibble(i= c(paste0(1:5), "...", "n"),
 :::
 :::
 
+![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+
+::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
+[CURRENT]{.red} WORK (Intuition)
+
+:::
+
+
+::: {.absolute style="left:-10%;top:18%;text-align:center"}
+
+More examples
+
+:::
 
 
 ::: notes
 :::
+
 
 <!------------------------------------Slide 19---------------------------------->
 ##  {auto-animate="true"}
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+[About Me \|]{style="opacity:0.20"} [My Work |]{style="opacity:0.20"} My Plans
 :::
+:::
+
+![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+
+::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
+[Reasearch]{.red} activities
+
+:::
+
+
+::: {.absolute style="left:-10%;top:18%;text-align:center"}
+
+
 :::
 
 
@@ -498,10 +631,24 @@ tibble(i= c(paste0(1:5), "...", "n"),
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+[About Me \|]{style="opacity:0.20"} [My Work |]{style="opacity:0.20"} My Plans
 :::
+:::
+
+![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+
+::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
+Overall [career]{.red} plans
+
+:::
+
+
+::: {.absolute style="left:-10%;top:18%;text-align:center"}
+
+
 :::
 
 
 ::: notes
 :::
+
