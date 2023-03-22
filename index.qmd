@@ -191,7 +191,8 @@ This is where my interest on econometric methods and causal inference in general
 (Econometric Methods)
 :::
 
-![](img/rd.png){data-id="rd" .absolute top="0%" left="-11%" width="900"}
+
+![](img/RD.png){.absolute data-id="rd" top="0%" left="-11%" width="900"}
 
 <br><br>
 
