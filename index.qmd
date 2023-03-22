@@ -163,7 +163,7 @@ MY [INTERESTS]{.purple}
 :::
 :::
 
-::: {.absolute style="right:-17%;top:50%; font-weight:bold"}
+::: {.absolute style="right:-15%;top:50%; font-weight:bold"}
 [PREVIOUS]{.green} WORK
 
 (Econometric Methods)
@@ -185,7 +185,7 @@ This is where my interest on econometric methods and causal inference in general
 :::
 :::
 
-::: {.absolute style="right:-17%;top:50%; font-weight:bold"}
+::: {.absolute style="right:-15%;top:50%; font-weight:bold"}
 [PREVIOUS]{.green} WORK
 
 (Econometric Methods)
