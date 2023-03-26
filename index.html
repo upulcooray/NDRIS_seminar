@@ -7,9 +7,10 @@
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.2.269">
+  <meta name="generator" content="quarto-1.2.475">
 
-  <title>index</title>
+  <meta name="author" content="Upul Cooray">
+  <title>Modelling WHAT IF questions  using observational data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,6 +28,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -325,125 +390,163 @@
   <div class="reveal">
     <div class="slides">
 
+<section id="title-slide" data-background-image="img/whatif.png" data-background-opacity="0.1" data-background-size="cover" class="quarto-title-block center">
+  <h1 class="title">Modelling <em>WHAT IF</em> questions <br>using observational data</h1>
 
-<section class="slide level2">
-
-<p><img data-src="img/causal.png" class="absolute" style="top: 70%; right: -1%; width: 475px; "></p>
-<div class="ti absolute" style="top: 20%; right: 0%; ">
-<p>How I Develop Intuition for</p>
-<p><span class="purple"><em>Causal Inference</em></span></p>
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Upul Cooray 
 </div>
+        <p class="quarto-title-affiliation">
+            Department International Oral Health<br> Tohoku University, Japan
+          </p>
+    </div>
+</div>
+
+  <p class="date">3/27/23</p>
+</section>
+<section id="section" class="slide level2" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h2></h2>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me | My Work | My Plans</span></p>
+<p><strong>About Me</strong> <span style="opacity:0.20">| My Work | My Plans</span></p>
 </div>
 </div>
-<p><img data-src="img/whatif.png" class="absolute" style="opacity: 0.1;top: 10%; left: 0%; width: 1000px; "></p>
+<div class="columns">
+<div class="column" style="width:25%;">
+<center>
+About <strong>ME</strong>
+</center>
+<center>
+<img data-src="img/pic.png" width="200">
+</center>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:65%;">
+<p><br></p>
+<ul>
+<li class="fragment"><p>A Dentist</p></li>
+<li class="fragment"><p>Graduated from University of Peradeniya, Sri Lanaka (2011)</p></li>
+<li class="fragment"><p>Clinical Dentist ~ 4 Years</p></li>
+<li class="fragment"><p>MSc Dental Public Health at UCL (2015-2016)</p></li>
+<li class="fragment"><p>PhD Dental Public Health at Tohoku University, Japan (2018-2022)</p></li>
+</ul>
+</div>
+</div>
+<div class="fragment">
+<p><span class="center">Currently work as an assistant professor at Tohoku University</span></p>
 <!------------------------------------Slide 2---------------------------------->
+</div>
 </section>
-<section id="section" class="slide level2" data-auto-animate="true">
+<section id="section-1" class="slide level2" data-background-image="img/whatif.png" data-background-opacity="0.1" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p>About Me <span style="opacity:0.20">| My Work | My Plans</span></p>
+<p><strong>About Me</strong> <span style="opacity:0.20">| My Work | My Plans</span></p>
 </div>
 </div>
-<p><img data-src="img/pic.png" class="absolute" style="top: 15%; left: -1%; width: 200px; "></p>
-<div class="absolute" data-id="me" style="left:-1%;top:45%; font-weight:bold">
-<p>ABOUT <span class="purple">ME</span></p>
-</div>
-<div class="absolute" style="left:25%;top:15%;">
+<div class="columns">
+<div class="column" style="width:25%;">
+<center>
+MY <strong>INTERESTS</strong>
+</center>
+<center>
+<img data-src="img/pic.png" width="200">
+</center>
+<center>
+<span class="purple">CONCEPTS</span>
+</center>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:65%;">
+<p><br></p>
 <ul>
-<li><p>A dentist</p></li>
-<li><p>Graduated from University of Peradeniya, Sri Lanaka (2011)</p></li>
-<li><p>Clinical dentist ~ 5 Years</p></li>
-<li><p>MSc Dental Public Health at UCL (2015-2016)</p></li>
-<li><p>PhD Dental Public Health at Tohoku University, Japan (2018-2022)</p></li>
+<li class="fragment"><p>Social determinants of health</p></li>
+<li class="fragment"><p>Oral health inequalities</p></li>
+<li class="fragment"><p>Association between oral health &amp; general health</p></li>
+<li class="fragment"><p>Evaluation of health policies</p></li>
+<li class="fragment"><p>Reproducible research</p></li>
 </ul>
+</div>
 </div>
 <!------------------------------------Slide 3---------------------------------->
 </section>
-<section id="section-1" class="slide level2" data-auto-animate="true">
+<section id="section-2" class="slide level2" data-background-image="img/whatif.png" data-background-opacity="0.1" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p>About Me <span style="opacity:0.20">| My Work | My Plans</span></p>
+<p><strong>About Me</strong> <span style="opacity:0.20">| My Work | My Plans</span></p>
 </div>
 </div>
-<p><img data-src="img/pic.png" class="absolute" style="top: 15%; left: -1%; width: 200px; "></p>
-<div class="absolute" data-id="me" style="left:-4%;top:45%; font-weight:bold">
-<p>MY <span class="purple">INTERESTS</span></p>
-<p>(CONCEPTS)</p>
-</div>
-<div class="absolute" style="left:25%;top:18%;">
+<div class="columns">
+<div class="column" style="width:25%;">
+<center>
+MY <strong>INTERESTS</strong>
+</center>
+<center>
+<img data-src="img/pic.png" width="200">
+</center>
+<center>
+<span class="purple">METHODS</span>
+</center>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:65%;">
+<p><br></p>
 <ul>
-<li><p>Social Determinants of Health</p></li>
-<li><p>Health Inequalities</p></li>
-<li><p>Common Risk Factors</p></li>
-<li><p>Evaluation of Health Policies</p></li>
-<li><p>Reproducible research</p></li>
+<li class="fragment"><p>Econometric methods for causal inference</p></li>
+<li class="fragment"><p>Modern causal inference frameworks for question based analytical approach</p></li>
+<li class="fragment"><p>Target Trial Emulations</p></li>
+<li class="fragment"><p>Intersection between machine learning and causal inference</p></li>
+<li class="fragment"><p>Doubly-robust estimators (TMLE, SDR)</p></li>
 </ul>
 </div>
-<!------------------------------------Slide 4---------------------------------->
+</div>
+<!------------------------------------Slide 3---------------------------------->
 </section>
-<section id="section-2" class="slide level2" data-auto-animate="true">
+<section id="section-3" class="slide level2" data-background-image="img/whatif.png" data-background-opacity="0.1" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p>About Me <span style="opacity:0.20">| My Work | My Plans</span></p>
+<p><strong>About Me</strong> <span style="opacity:0.20">| My Work | My Plans</span></p>
 </div>
 </div>
-<p><img data-src="img/pic.png" class="absolute" style="top: 15%; left: -1%; width: 200px; "></p>
-<div class="absolute" data-id="me" style="left:-4%;top:45%; font-weight:bold">
-<p>MY <span class="purple">INTERESTS</span></p>
-<p>(METHODS)</p>
-</div>
-<div class="absolute" style="left:25%;top:18%;">
+<div class="columns">
+<div class="column" style="width:25%;">
+<center>
+MY <strong>INTERESTS</strong>
+</center>
+<center>
+<img data-src="img/pic.png" width="200">
+</center>
+<center>
+<span class="purple">OTHER</span>
+</center>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:65%;">
+<p><br></p>
 <ul>
-<li><p>Econometric methods for causal inference</p></li>
-<li><p>Modern causal inference frameworks for question based analytical approach</p></li>
-<li><p>Target Trial Emulations</p></li>
-<li><p>Intersection between machine learning and causal inference</p></li>
-<li><p>Doubly-robust estimators (TMLE, SDR)</p></li>
+<li class="fragment"><p>R programming and functional programming in general</p></li>
+<li class="fragment"><p>Learning new concepts (almost anything)</p></li>
+<li class="fragment"><p>Teaching</p></li>
+<li class="fragment"><p>Badminton</p></li>
+<li class="fragment"><p>Playing with my kids</p></li>
 </ul>
 </div>
-<!------------------------------------Slide 5---------------------------------->
-</section>
-<section id="section-3" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
-<div class="absolute" style="top: 0px; right: -10%; ">
-<div class="sectionhead" data-id="head">
-<p>About Me <span style="opacity:0.20">| My Work | My Plans</span></p>
-</div>
-</div>
-<p><img data-src="img/pic.png" class="absolute" style="top: 15%; left: -1%; width: 200px; "></p>
-<div class="absolute" data-id="me" style="left:-4%;top:45%; font-weight:bold">
-<p>MY <span class="purple">INTERESTS</span></p>
-<p>(OTHER)</p>
-</div>
-<div class="absolute" style="left:25%;top:18%;">
-<ul>
-<li><p>R programming and functional programming in general</p></li>
-<li><p>Learning new concepts (almost anything)</p></li>
-<li><p>Teaching</p></li>
-<li><p>Badminton</p></li>
-<li><p>Playing with my kids</p></li>
-</ul>
 </div>
 <!------------------------------------Slide 6---------------------------------->
 </section>
-<section id="section-4" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
+<section id="previous-work" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"><span class="green">PREVIOUS</span> WORK</h2>
+<h3 id="econometric-methods">(Econometric Methods)</h3>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me |</span> My Work <span style="opacity:0.20">| My Plans</span></p>
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
 </div>
 </div>
-<div class="absolute" style="right:-15%;top:50%; font-weight:bold">
-<p><span class="green">PREVIOUS</span> WORK</p>
-<p>(Econometric Methods)</p>
-</div>
-<p><img data-src="img/rdabs.png" class="absolute" style="top: 0%; left: -11%; width: 900px; " data-id="rd"></p>
+<p><img data-src="img/rdabs.png" style="height:100.0%" data-id="rd" width="900"></p>
 <aside class="notes">
 <p>This is where my interest on econometric methods and causal inference in general sparked I think econometric methods are very good in accounting for unmeasured confounding But difficult to find data and proper use cases with epidemiological survey data, Eg: finding appropriate strong IV, Data to simulate a synthetic control</p>
 <style type="text/css">
@@ -459,20 +562,16 @@
       }</style></aside>
 <!------------------------------------Slide 7---------------------------------->
 </section>
-<section id="section-5" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
+<section id="previous-work-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"><span class="green">PREVIOUS</span> WORK</h2>
+<h3 id="econometric-methods-1">(Econometric Methods)</h3>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me |</span> My Work <span style="opacity:0.20">| My Plans</span></p>
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
 </div>
 </div>
-<div class="absolute" style="right:-15%;top:50%; font-weight:bold">
-<p><span class="green">PREVIOUS</span> WORK</p>
-<p>(Econometric Methods)</p>
-</div>
-<p><img data-src="img/RD.png" class="absolute" style="top: 0%; left: -11%; width: 900px; " data-id="rd"></p>
-<p><br><br></p>
-<p><img data-src="img/rdplot.png" class="absolute" style="left: -11%; width: 900px; "></p>
+<p><img data-src="img/RD.png" data-id="rd" width="800"></p>
+<p><img data-src="img/rdplot.png" width="800"></p>
 <aside class="notes">
 <p>This is where my interest on econometric methods and causal inference in general sparked I think econometric methods are very good in accounting for unmeasured confounding But difficult to find data and proper use cases with epidemiological survey data, Eg: finding appropriate strong IV, Data to simulate a synthetic control</p>
 <style type="text/css">
@@ -488,19 +587,16 @@
       }</style></aside>
 <!------------------------------------Slide 8---------------------------------->
 </section>
-<section id="section-6" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
+<section id="previous-work-2" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"><span class="purple">PREVIOUS</span> WORK</h2>
+<h3 id="machine-learning">(Machine Learning)</h3>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me |</span> My Work <span style="opacity:0.20">| My Plans</span></p>
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
 </div>
 </div>
-<div class="absolute" data-id="previous" style="right:-10%;top:50%; font-weight:bold">
-<p><span class="green">PREVIOUS</span> WORK</p>
-<p>(Machine Learning)</p>
-</div>
-<p><img data-src="img/ml1.png" class="absolute" style="top: -1%; left: -11%; width: 900px; " data-id="ml1"></p>
-<p><img data-src="img/ml2.png" class="absolute" style="top: 40%; left: -11%; width: 900px; "></p>
+<p><img data-src="img/ml1.png" data-id="ml1" width="800"></p>
+<p><img data-src="img/ml2.png" width="800"></p>
 <aside class="notes">
 <p>I got bored during the initial lock down period of the pandemic so I wanted to understand little bit about machine learning and started a toy project to predict tooth loss using survey data and I ended up publishing my results in SSM.</p>
 <p>and then I used similar methods to work on a project with a Japanese collegeue to predict the fall risk among older adults.</p>
@@ -517,19 +613,16 @@
       }</style></aside>
 <!------------------------------------Slide 9---------------------------------->
 </section>
-<section id="section-7" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
+<section id="previous-work-3" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"><span class="purple">PREVIOUS</span> WORK</h2>
+<h3 id="machine-learning-1">(Machine Learning)</h3>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me |</span> My Work <span style="opacity:0.20">| My Plans</span></p>
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
 </div>
 </div>
-<div class="absolute" data-id="previous" style="right:-10%;top:50%; font-weight:bold">
-<p><span class="green">PREVIOUS</span> WORK</p>
-<p>(Machine Learning)</p>
-</div>
-<p><img data-src="img/ml1-2.png" class="absolute" style="top: -1%; left: -11%; width: 900px; " data-id="ml1"></p>
-<p><img data-src="img/shap1.png" class="absolute" style="top: 20%; left: -11%; width: 900px; "></p>
+<p><img data-src="img/ml1-2.png" data-id="ml1" width="800"></p>
+<p><img data-src="img/shap1.png" width="750"></p>
 <aside class="notes">
 <p>In these studies I tried to adopt explainable ML methods to get some meaningful interpretations out of machine learning predictions I was working on stata prior to these project but I learn a lot of python just to implement these two studies. However, currently my workflow is exclusively based on R.</p>
 <style type="text/css">
@@ -545,19 +638,17 @@
       }</style></aside>
 <!------------------------------------Slide 10---------------------------------->
 </section>
-<section id="section-8" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
+<section id="previous-work-4" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"><span class="purple">PREVIOUS</span> WORK</h2>
+<h3 id="causal-inference-tmle-super-learner">(Causal inference + TMLE + Super Learner)</h3>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me |</span> My Work <span style="opacity:0.20">| My Plans</span></p>
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
 </div>
 </div>
-<div class="absolute" style="left:-10%;top:0%; font-weight:bold">
-<p><span class="red">CURRENT</span> WORK</p>
-<p>(Causal inference + Machine Learning)</p>
-</div>
-<p><img data-src="img/accepted.png" class="absolute" style="top: 18%; left: -11%; width: 900px; "></p>
-<p><br> <br></p>
+<p><br></p>
+
+<img data-src="img/accepted.png" width="900" class="r-stretch"><p><br> <br></p>
 <aside class="notes">
 
 <style type="text/css">
@@ -573,28 +664,24 @@
       }</style></aside>
 <!------------------------------------Slide 11---------------------------------->
 </section>
-<section id="section-9" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
-<div class="absolute" style="left:-10%;top:0%; font-weight:bold">
-<p><span class="red">CURRENT</span> WORK (Intuition)</p>
-</div>
-<p><img data-src="img/whatif.png" class="absolute" style="opacity: 0.1;top: 10%; left: 0%; width: 1000px; "></p>
-<p><br> <br></p>
+<section id="current-work" class="slide level2" data-auto-animate="true" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h2 data-id="quarto-animate-title"><span class="pink">CURRENT</span> WORK</h2>
+<h3 id="intuition">(Intuition)</h3>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me |</span> My Work <span style="opacity:0.20">| My Plans</span></p>
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
 </div>
 </div>
-<div class="absolute" style="left:-10%;top:18%;">
+<p><br></p>
+<center>
+<p><span class="huge">We usually default to <br>a “<strong>model-based</strong>” analytic approach <br>in oral epidemiological studies</span></p>
+<div class="small ul2">
 <ul>
-<li><p>We usually default to a “<strong>model-based</strong>” analytic approach in oral epidemiological studies</p>
-<p><span class="f-25">E.g.:</span></p>
-<ul>
-<li><span class="f-25">Binary outcome - run a logistic regression</span></li>
-<li><span class="f-25">Time-to-event outcome - Cox-regression</span></li>
-</ul></li>
+<li class="fragment">Binary outcome –&gt; run a logistic regression</li>
+<li class="fragment">Time-to-event outcome –&gt; Cox-regression</li>
 </ul>
 </div>
+</center>
 <aside class="notes">
 
 <style type="text/css">
@@ -610,27 +697,20 @@
       }</style></aside>
 <!------------------------------------Slide 12---------------------------------->
 </section>
-<section id="section-10" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
-<div class="absolute" style="left:-10%;top:0%; font-weight:bold">
-<p><span class="red">CURRENT</span> WORK (Intuition)</p>
-<p><span class="blue f-25">Some limitations of model based approaches</span></p>
-</div>
-<p><img data-src="img/whatif.png" class="absolute" style="opacity: 0.1;top: 10%; left: 0%; width: 1000px; "></p>
-<p><br> <br></p>
+<section id="current-work-intuition" class="slide level2" data-auto-animate="true" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h2 data-id="quarto-animate-title"><span class="pink">CURRENT</span> WORK (Intuition)</h2>
+<h3 id="some-limitations-of-model-based-approaches"><span class="blue">Some limitations of model based approaches</span></h3>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me |</span> My Work <span style="opacity:0.20">| My Plans</span></p>
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
 </div>
 </div>
-<div class="absolute semi-fade-out" style="left:-10%;top:18%;">
 <ul>
-<li class="fragment"><p>Regression coefficients often do not represent well-defined effects <br> <span class="f-20">Hernán MA. The hazards of hazard ratios. Epidemiology. 2010;21(1):13-15</span></p></li>
+<li class="fragment"><p>Regression coefficients often do not represent well-defined effects <span class="refs">Hernán MA. The hazards of hazard ratios. Epidemiology. 2010;21(1):13-15</span></p></li>
 <li class="fragment"><p>Modelling assumptions used are rarely correct</p></li>
-<li class="fragment"><p>Regression models cannot correctly handle time-dependent feedback among confounders, treatment, and the outcome <br> <span class="f-20">Robins JM. Hernán MA. Causal Inference: What If</span></p></li>
-<li class="fragment"><p>Model-first approaches fail to account for the variance induced during model selection <br> <span class="f-20">Smith G. Step away from step wise. J Big Data. 2018;5(1):1-12</span></p></li>
+<li class="fragment"><p>Regression models cannot correctly handle time-dependent feedback among confounders, treatment, and the outcome <span class="refs">Robins JM. Hernán MA. Causal Inference: What If</span></p></li>
+<li class="fragment"><p>Model-first approaches fail to account for the variance induced during model selection <span class="refs">Smith G. Step away from step wise. J Big Data. 2018;5(1):1-12</span></p></li>
 </ul>
-</div>
 <aside class="notes">
 
 <style type="text/css">
@@ -646,24 +726,17 @@
       }</style></aside>
 <!------------------------------------Slide 13---------------------------------->
 </section>
-<section id="section-11" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
+<section id="current-work-intuition-1" class="slide level2" data-auto-animate="true" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h2 data-id="quarto-animate-title"><span class="pink">CURRENT</span> WORK (Intuition)</h2>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me |</span> My Work <span style="opacity:0.20">| My Plans</span></p>
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
 </div>
 </div>
-<p><img data-src="img/whatif.png" class="absolute" style="opacity: 0.1;top: 10%; left: 0%; width: 1000px; "></p>
-<div class="absolute" style="left:-10%;top:0%; font-weight:bold">
-<p><span class="red">CURRENT</span> WORK (Intuition)</p>
-</div>
-<div class="absolute" style="left:-10%;top:18%;text-align:center">
-<p>A potential solution would be</p>
-<p><strong>“Question Based”</strong> approach</p>
-</div>
-<div class="absolute f-25" style="left:-10%;top:50%">
-<p>PetersenML,vanderLaanMJ.Causalmodelsandlearningfromdata:integratingcausalmodelingand statistical estimation. Epidemiology. 2014;25(3):418-426.</p>
-</div>
+<br><br>
+<center>
+<span class="huge">A potential solution would be to adapt <strong>“Question Based”</strong> approaches <sup>1</sup></span>
+</center>
 <aside class="notes">
 
 <style type="text/css">
@@ -678,80 +751,21 @@
           display:block!important;
       }</style></aside>
 <!------------------------------------Slide 14---------------------------------->
-</section>
-<section id="section-12" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Petersen ML,vander Laan MJ. Causal models and learning from data: integrating causal modeling and statistical estimation. Epidemiology. 2014;25(3):418-426.</p></li></ol></aside></section>
+<section id="current-work-intuition-2" class="slide level2" data-auto-animate="true" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h2 data-id="quarto-animate-title"><span class="pink">CURRENT</span> WORK (Intuition)</h2>
+<h3 id="potential-outcome-counterfactual-framework"><span class="blue">Potential outcome/ Counterfactual framework</span></h3>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me |</span> My Work <span style="opacity:0.20">| My Plans</span></p>
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
 </div>
 </div>
-<p><img data-src="img/whatif.png" class="absolute" style="opacity: 0.1;top: 10%; left: 0%; width: 1000px; "></p>
-<div class="absolute" style="left:-10%;top:0%; font-weight:bold">
-<p><span class="red">CURRENT</span> WORK (Intuition)</p>
+<p><br></p>
+<div class="center">
+<p><span class="red">What if</span> <em>everyone EXPOSED</em> (<span class="red">A=1</span>) vs <em>everyone UNEXPOSED</em> (<span class="blue">A=0</span>)</p>
 </div>
-<div class="absolute" style="left:-10%;top:18%;text-align:center">
-<p>Potential outcome/ Counterfactual framework</p>
-<p>Asking <strong>“what if”</strong> questions</p>
-</div>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<!-----------------------------------Slide 15---------------------------------->
-</section>
-<section id="section-13" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
-<div class="absolute" style="top: 0px; right: -10%; ">
-<div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me |</span> My Work <span style="opacity:0.20">| My Plans</span></p>
-</div>
-</div>
-<p><img data-src="img/whatif.png" class="absolute" style="opacity: 0.1;top: 10%; left: 0%; width: 1000px; "></p>
-<div class="absolute" style="left:-10%;top:0%; font-weight:bold">
-<p><span class="red">CURRENT</span> WORK (Intuition)</p>
-</div>
-<div class="absolute" style="left:-10%;top:18%;text-align:center">
-<p>Key Asumptions</p>
-</div>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<!-----------------------------------Slide 15---------------------------------->
-</section>
-<section id="section-14" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
-<div class="absolute" style="left:-10%;top:0%; font-weight:bold">
-<p><span class="red">CURRENT</span> WORK (Intuition for the methods)</p>
-</div>
-<div class="absolute" style="top: 0px; right: -10%; ">
-<div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me |</span> My Work <span style="opacity:0.20">| My Plans</span></p>
-</div>
-</div>
-<p><img data-src="img/whatif.png" class="absolute" style="opacity: 0.1;top: 10%; left: 0%; width: 1000px; "></p>
-<p><br><br><br></p>
 <div class="columns">
-<div class="column" style="width:40%;">
+<div class="column" style="width:22%;">
 <div class="cell">
 <div class="cell-output-display">
 
@@ -767,53 +781,53 @@
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;font-style: italic;"> 1 </td>
    <td style="text-align:left;"> 9 </td>
-   <td style="text-align:left;"> 1 </td>
-   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">1</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">2</span> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;font-style: italic;"> 2 </td>
    <td style="text-align:left;"> 6 </td>
-   <td style="text-align:left;"> 0 </td>
-   <td style="text-align:left;"> 7 </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;">0</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;">7</span> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> 3 </td>
+   <td style="text-align:left;font-style: italic;"> 3 </td>
    <td style="text-align:left;"> 10 </td>
-   <td style="text-align:left;"> 1 </td>
-   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">1</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">2</span> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> 4 </td>
+   <td style="text-align:left;font-style: italic;"> 4 </td>
    <td style="text-align:left;"> 7 </td>
-   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">1</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">8</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-style: italic;"> 5 </td>
    <td style="text-align:left;"> 8 </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">1</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">2</span> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> 5 </td>
-   <td style="text-align:left;"> 8 </td>
-   <td style="text-align:left;"> 1 </td>
-   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;font-style: italic;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;">...</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;">...</span> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> ... </td>
-   <td style="text-align:left;"> ... </td>
-   <td style="text-align:left;"> ... </td>
-   <td style="text-align:left;"> ... </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> n </td>
+   <td style="text-align:left;font-style: italic;"> n </td>
    <td style="text-align:left;"> 6 </td>
-   <td style="text-align:left;"> 0 </td>
-   <td style="text-align:left;"> 3 </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;">0</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;">3</span> </td>
   </tr>
 </tbody>
 </table>
 
 </div>
 </div>
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:39%;">
 <div class="cell">
 <div class="cell-output-display">
 
@@ -830,53 +844,123 @@
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;font-style: italic;"> 1 </td>
    <td style="text-align:left;"> 9 </td>
-   <td style="text-align:left;"> 1 </td>
-   <td style="text-align:left;"> NA </td>
-   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">1</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">NA</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">2</span> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;font-style: italic;"> 2 </td>
    <td style="text-align:left;"> 6 </td>
-   <td style="text-align:left;"> 0 </td>
-   <td style="text-align:left;"> 7 </td>
-   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;">0</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">7</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">NA</span> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> 3 </td>
+   <td style="text-align:left;font-style: italic;"> 3 </td>
    <td style="text-align:left;"> 10 </td>
-   <td style="text-align:left;"> 1 </td>
-   <td style="text-align:left;"> NA </td>
-   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">1</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">NA</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">2</span> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> 4 </td>
+   <td style="text-align:left;font-style: italic;"> 4 </td>
    <td style="text-align:left;"> 7 </td>
-   <td style="text-align:left;"> 1 </td>
-   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">1</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">NA</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">8</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-style: italic;"> 5 </td>
    <td style="text-align:left;"> 8 </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">1</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">NA</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">2</span> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> 5 </td>
-   <td style="text-align:left;"> 8 </td>
-   <td style="text-align:left;"> 1 </td>
-   <td style="text-align:left;"> NA </td>
-   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;font-style: italic;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;">...</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">...</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">...</span> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> ... </td>
-   <td style="text-align:left;"> ... </td>
-   <td style="text-align:left;"> ... </td>
-   <td style="text-align:left;"> ... </td>
-   <td style="text-align:left;"> ... </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> n </td>
+   <td style="text-align:left;font-style: italic;"> n </td>
    <td style="text-align:left;"> 6 </td>
-   <td style="text-align:left;"> 0 </td>
-   <td style="text-align:left;"> 3 </td>
-   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;">0</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">3</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">NA</span> </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div><div class="column" data-id="tab1" style="width:39%;">
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table" style="font-size: 30px; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">Causal model</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> i </th>
+   <th style="text-align:left;"> X </th>
+   <th style="text-align:left;"> A </th>
+   <th style="text-align:left;"> Y(0) </th>
+   <th style="text-align:left;"> Y(1) </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;font-style: italic;"> 1 </td>
+   <td style="text-align:left;"> 9 </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">1</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">5</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">2</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-style: italic;"> 2 </td>
+   <td style="text-align:left;"> 6 </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;">0</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">7</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">3</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-style: italic;"> 3 </td>
+   <td style="text-align:left;"> 10 </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">1</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">5</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">2</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-style: italic;"> 4 </td>
+   <td style="text-align:left;"> 7 </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">1</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">3</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">8</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-style: italic;"> 5 </td>
+   <td style="text-align:left;"> 8 </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">1</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">5</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">2</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-style: italic;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;">...</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">...</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">...</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-style: italic;"> n </td>
+   <td style="text-align:left;"> 6 </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;">0</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">3</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">4</span> </td>
   </tr>
 </tbody>
 </table>
@@ -884,6 +968,187 @@
 </div>
 </div>
 </div>
+</div>
+<aside class="notes">
+<p>no such thing as a “method for causal inference”</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-----------------------------------Slide 15---------------------------------->
+</section>
+<section id="current-work-intuition-3" class="slide level2" data-auto-animate="true" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h2 data-id="quarto-animate-title"><span class="pink">CURRENT</span> WORK (Intuition)</h2>
+<h3 id="ate-and-beyond-ate"><span class="blue">ATE and Beyond ATE</span></h3>
+<div class="absolute" style="top: 0px; right: -10%; ">
+<div class="sectionhead" data-id="head">
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
+</div>
+</div>
+<div class="columns">
+<div class="column" data-id="tab1" style="width:30%;">
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table" style="font-size: 20px; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">Causal model</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> i </th>
+   <th style="text-align:left;"> X </th>
+   <th style="text-align:left;"> A </th>
+   <th style="text-align:left;"> Y(0) </th>
+   <th style="text-align:left;"> Y(1) </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;font-style: italic;"> 1 </td>
+   <td style="text-align:left;"> 9 </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">1</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">5</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">2</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-style: italic;"> 2 </td>
+   <td style="text-align:left;"> 6 </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;">0</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">7</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">3</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-style: italic;"> 3 </td>
+   <td style="text-align:left;"> 10 </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">1</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">5</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">2</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-style: italic;"> 4 </td>
+   <td style="text-align:left;"> 7 </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">1</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">3</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">8</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-style: italic;"> 5 </td>
+   <td style="text-align:left;"> 8 </td>
+   <td style="text-align:left;"> <span style="     color: red !important;">1</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">5</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">2</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-style: italic;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;">...</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">...</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">...</span> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-style: italic;"> n </td>
+   <td style="text-align:left;"> 6 </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;">0</span> </td>
+   <td style="text-align:left;"> <span style="     color: blue !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color:  !important;">3</span> </td>
+   <td style="text-align:left;"> <span style="     color: red !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 240, 55, 0.67) !important;">4</span> </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="small">
+<p><span class="math display">\[
+\text{ATE}:=\mathbb{E}[Y(1)-Y(0)]
+\]</span></p>
+</div>
+</div><div class="column fragment" style="width:70%;">
+<p>ATE can be a causal estimate given;</p>
+<ol type="1">
+<li><p>POSITIVITY</p>
+<p><span class="refs2">Some positive probability of getting either <code>A=1</code>﻿ or <code>A=0</code>,﻿ based on their covariates (<code>X</code>)</span></p></li>
+<li><p>UNCONFONDEDNESS</p>
+<p><span class="refs2">All the common causes of <code>Y(a)</code>﻿ and <code>A</code>﻿ must be contained in <code>X</code> <br>Other names: Ignorability/ Exogeneity</span>﻿</p></li>
+</ol>
+</div>
+</div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-----------------------------------Slide 15---------------------------------->
+</section>
+<section id="current-work-intuition-4" class="slide level2" data-auto-animate="true" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h2 data-id="quarto-animate-title"><span class="pink">CURRENT</span> WORK (Intuition)</h2>
+<h3 id="some-limitations-of-ate"><span class="blue">Some limitations of ATE</span></h3>
+<div class="absolute" style="top: 0px; right: -10%; ">
+<div class="sectionhead" data-id="head">
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><strong>Positivity violation</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/real.png" data-id="real" width="200"></p>
+<p></p><figcaption>“Reality”</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/reD.png" data-id="a1" width="200"></p>
+<p></p><figcaption>A= 1 (counterfactual)</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/BLUE.png" data-id="a0" width="200"></p>
+<p></p><figcaption>A= 0 (counterfactual)</figcaption><p></p>
+</figure>
+</div>
+</div><div class="column fragment" style="width:30%;">
+<p><strong>Unrealistic contrast/ Static interventions</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/reD.png" data-id="a1" width="250"></p>
+<p></p><figcaption>A= 1</figcaption><p></p>
+</figure>
+</div>
+<p><span style="padding-left:120px;">vs</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/BLUE.png" data-id="a1" width="250"></p>
+<p></p><figcaption>A= 0</figcaption><p></p>
+</figure>
+</div>
+</div><div class="column fragment ul2" style="width:40%;">
+<p><strong>Continuous/ categorical exposures</strong> <br></p>
+<ul>
+<li class="fragment">Estimation &amp; Interpretation is not straightforward</li>
+</ul>
+<div class="fragment refs2">
+<p>Think beyond ATE to minimize positivity violation and to obtain more realistic contrasts</p>
+</div>
+</div>
+</div>
+<div class="absolute" style="bottom: -10%; ">
+<p><span class="refs1">Iván Díaz, Nicholas Williams, Katherine L. Hoffman &amp; Edward J. Schenck (2021) Nonparametric Causal Effects Based on Longitudinal Modified Treatment Policies, Journal of the American Statistical Association</span></p>
 </div>
 <aside class="notes">
 
@@ -900,20 +1165,28 @@
       }</style></aside>
 <!------------------------------------Slide 15---------------------------------->
 </section>
-<section id="section-15" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
+<section id="current-work-intuition-5" class="slide level2" data-auto-animate="true" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h2 data-id="quarto-animate-title"><span class="pink">CURRENT</span> WORK (Intuition)</h2>
+<h3 id="alternative-interventions"><span class="blue">Alternative interventions</span></h3>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me |</span> My Work <span style="opacity:0.20">| My Plans</span></p>
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
 </div>
 </div>
-<p><img data-src="img/whatif.png" class="absolute" style="opacity: 0.1;top: 10%; left: 0%; width: 1000px; "></p>
-<div class="absolute" style="left:-10%;top:0%; font-weight:bold">
-<p><span class="red">CURRENT</span> WORK (Intuition)</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><img data-src="img/real.png" style="padding-top:50px" data-id="real" width="300"> <span style="padding-left:2em">Observed</span></p>
+</div><div class="column" style="width:33%;">
+<p><img data-src="img/dynamic.png" style="padding-top:50px" width="300"> Dynamic intervention</p>
+</div><div class="column" style="width:33%;">
+<p><img data-src="img/mtp.png" style="padding-top:50px" width="300"> Modified intervention</p>
 </div>
-<div class="absolute" style="left:-10%;top:18%;text-align:center">
-<p>Limitations of conventional approach</p>
 </div>
+<ul>
+<li class="fragment"><p>Possibility of positivity violation is low</p></li>
+<li class="fragment"><p>Can easily model non binary exposures</p></li>
+<li class="fragment"><p>Gives flexibility to ask more realistic <strong>what if</strong> questions</p></li>
+</ul>
 <aside class="notes">
 
 <style type="text/css">
@@ -929,19 +1202,25 @@
       }</style></aside>
 <!------------------------------------Slide 16---------------------------------->
 </section>
-<section id="section-16" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
+<section id="current-work-intuition-6" class="slide level2" data-auto-animate="true" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h2 data-id="quarto-animate-title"><span class="pink">CURRENT</span> WORK (Intuition)</h2>
+<h3 id="what-is-a-modified-treatment-policy"><span class="blue">What is a modified treatment policy?</span></h3>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me |</span> My Work <span style="opacity:0.20">| My Plans</span></p>
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
 </div>
 </div>
-<p><img data-src="img/whatif.png" class="absolute" style="opacity: 0.1;top: 10%; left: 0%; width: 1000px; "></p>
-<div class="absolute" style="left:-10%;top:0%; font-weight:bold">
-<p><span class="red">CURRENT</span> WORK (Intuition)</p>
+<div class="infobox">
+<p>A modified treatment policy (MTP) is defined as an intervention that can depend on the natural value of the exposure.</p>
 </div>
-<div class="absolute" style="left:-10%;top:18%;text-align:center">
-<p>methods to overcomes above limitations</p>
+<ul>
+<li class="fragment"><p>We start by defining our casual question as a MTP</p></li>
+<li class="fragment"><p>Often standard parametric approaches cannot handle these problems</p></li>
+</ul>
+<div class="fragment">
+<center>
+<img data-src="img/lmtp-paper.png" width="600">
+</center>
 </div>
 <aside class="notes">
 
@@ -958,19 +1237,64 @@
       }</style></aside>
 <!------------------------------------Slide 17---------------------------------->
 </section>
-<section id="section-17" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
+<section id="current-work-implementation" class="slide level2" data-auto-animate="true" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h2 data-id="quarto-animate-title"><span class="pink">CURRENT</span> WORK (Implementation)</h2>
+<h3 id="mtp-example-01"><span class="blue" data-id="ex1">MTP [Example 01]</span></h3>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me |</span> My Work <span style="opacity:0.20">| My Plans</span></p>
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
 </div>
 </div>
-<p><img data-src="img/whatif.png" class="absolute" style="opacity: 0.1;top: 10%; left: 0%; width: 1000px; "></p>
-<div class="absolute" style="left:-10%;top:0%; font-weight:bold">
-<p><span class="red">CURRENT</span> WORK (Intuition)</p>
+
+<img data-src="img/bmi.png" class="r-stretch"><aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!------------------------------------Slide 18---------------------------------->
+</section>
+<section id="current-work-implementation-1" class="slide level2" data-auto-animate="true" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h2 data-id="quarto-animate-title"><span class="pink">CURRENT</span> WORK (Implementation)</h2>
+<h3 id="mtp-example-01-impact-of-bmi-changes-on-risk-of-back-pain"><span class="blue" data-id="ex1">MTP [Example 01]: Impact of BMI changes on risk of back pain</span></h3>
+<div class="absolute" style="top: 0px; right: -10%; ">
+<div class="sectionhead" data-id="head">
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
 </div>
-<div class="absolute" style="left:-10%;top:18%;text-align:center">
-<p>Examples from my work</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|1|3-4,11-12,19-20|6|"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a href="#cb1-1"></a><span class="co"># What if BMI everyone increased their BMI by 1. 10% 2. 20%  3. 30% from their observed BMI</span></span>
+<span id="cb1-2" class="hljs-ln-code"><a href="#cb1-2"></a></span>
+<span id="cb1-3" class="hljs-ln-code"><a href="#cb1-3"></a>increase_10_perc <span class="ot">&lt;-</span> <span class="cf">function</span>(data, trt) {</span>
+<span id="cb1-4" class="hljs-ln-code"><a href="#cb1-4"></a>  val <span class="ot">&lt;-</span> data[[trt]] <span class="sc">+</span> (data[[trt]]<span class="sc">*</span><span class="fl">0.1</span>) <span class="co"># desired calculation</span></span>
+<span id="cb1-5" class="hljs-ln-code"><a href="#cb1-5"></a>  obs <span class="ot">&lt;-</span> data[[trt]]                     <span class="co"># observed value</span></span>
+<span id="cb1-6" class="hljs-ln-code"><a href="#cb1-6"></a>  val <span class="sc">*</span> (val <span class="sc">&lt;=</span> <span class="dv">40</span>) <span class="sc">+</span>   <span class="co"># 40 is set as maximum biologically plausible BMI</span></span>
+<span id="cb1-7" class="hljs-ln-code"><a href="#cb1-7"></a>  (((obs <span class="sc">&lt;</span><span class="dv">40</span>) <span class="sc">&amp;</span> (val<span class="sc">&gt;</span><span class="dv">40</span>)) <span class="sc">*</span> <span class="dv">40</span>)<span class="sc">+</span></span>
+<span id="cb1-8" class="hljs-ln-code"><a href="#cb1-8"></a>  (obs <span class="sc">*</span> (obs <span class="sc">&gt;</span> <span class="dv">40</span>))</span>
+<span id="cb1-9" class="hljs-ln-code"><a href="#cb1-9"></a>}</span>
+<span id="cb1-10" class="hljs-ln-code"><a href="#cb1-10"></a></span>
+<span id="cb1-11" class="hljs-ln-code"><a href="#cb1-11"></a>increase_20_perc <span class="ot">&lt;-</span> <span class="cf">function</span>(data, trt) {</span>
+<span id="cb1-12" class="hljs-ln-code"><a href="#cb1-12"></a>  val <span class="ot">&lt;-</span> data[[trt]] <span class="sc">+</span> (data[[trt]]<span class="sc">*</span><span class="fl">0.2</span>) <span class="co"># desired calculation</span></span>
+<span id="cb1-13" class="hljs-ln-code"><a href="#cb1-13"></a>  obs <span class="ot">&lt;-</span> data[[trt]]                     <span class="co"># observed value</span></span>
+<span id="cb1-14" class="hljs-ln-code"><a href="#cb1-14"></a>  val <span class="sc">*</span> (val <span class="sc">&lt;=</span> <span class="dv">40</span>) <span class="sc">+</span>   <span class="co"># 40 is set as maximum biologically plausible BMI</span></span>
+<span id="cb1-15" class="hljs-ln-code"><a href="#cb1-15"></a>  (((obs <span class="sc">&lt;</span><span class="dv">40</span>) <span class="sc">&amp;</span> (val<span class="sc">&gt;</span><span class="dv">40</span>)) <span class="sc">*</span> <span class="dv">40</span>)<span class="sc">+</span></span>
+<span id="cb1-16" class="hljs-ln-code"><a href="#cb1-16"></a>  (obs <span class="sc">*</span> (obs <span class="sc">&gt;</span> <span class="dv">40</span>))</span>
+<span id="cb1-17" class="hljs-ln-code"><a href="#cb1-17"></a>}</span>
+<span id="cb1-18" class="hljs-ln-code"><a href="#cb1-18"></a></span>
+<span id="cb1-19" class="hljs-ln-code"><a href="#cb1-19"></a>increase_30_perc <span class="ot">&lt;-</span> <span class="cf">function</span>(data, trt) {</span>
+<span id="cb1-20" class="hljs-ln-code"><a href="#cb1-20"></a>  val <span class="ot">&lt;-</span> data[[trt]] <span class="sc">+</span> (data[[trt]]<span class="sc">*</span><span class="fl">0.3</span>) <span class="co"># desired calculation</span></span>
+<span id="cb1-21" class="hljs-ln-code"><a href="#cb1-21"></a>  obs <span class="ot">&lt;-</span> data[[trt]]                     <span class="co"># observed value</span></span>
+<span id="cb1-22" class="hljs-ln-code"><a href="#cb1-22"></a>  val <span class="sc">*</span> (val <span class="sc">&lt;=</span> <span class="dv">40</span>) <span class="sc">+</span>   <span class="co"># 40 is set as maximum biologically plausible BMI</span></span>
+<span id="cb1-23" class="hljs-ln-code"><a href="#cb1-23"></a>  (((obs <span class="sc">&lt;</span><span class="dv">40</span>) <span class="sc">&amp;</span> (val<span class="sc">&gt;</span><span class="dv">40</span>)) <span class="sc">*</span> <span class="dv">40</span>)<span class="sc">+</span></span>
+<span id="cb1-24" class="hljs-ln-code"><a href="#cb1-24"></a>  (obs <span class="sc">*</span> (obs <span class="sc">&gt;</span> <span class="dv">40</span>))</span>
+<span id="cb1-25" class="hljs-ln-code"><a href="#cb1-25"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <aside class="notes">
 
@@ -987,19 +1311,40 @@
       }</style></aside>
 <!------------------------------------Slide 18---------------------------------->
 </section>
-<section id="section-18" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
+<section id="current-work-implementation-2" class="slide level2" data-auto-animate="true" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h2 data-id="quarto-animate-title"><span class="pink">CURRENT</span> WORK (Implementation)</h2>
+<h3 id="mtp-example-01-impact-of-bmi-changes-on-risk-of-back-pain-1"><span class="blue" data-id="ex1">MTP [Example 01]: Impact of BMI changes on risk of back pain</span></h3>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me |</span> My Work <span style="opacity:0.20">| My Plans</span></p>
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
 </div>
 </div>
-<p><img data-src="img/whatif.png" class="absolute" style="opacity: 0.1;top: 10%; left: 0%; width: 1000px; "></p>
-<div class="absolute" style="left:-10%;top:0%; font-weight:bold">
-<p><span class="red">CURRENT</span> WORK (Intuition)</p>
-</div>
-<div class="absolute" style="left:-10%;top:18%;text-align:center">
-<p>More examples</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="|1|3-4,11-12,19-20|7|"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb2-1" class="hljs-ln-code"><a href="#cb2-1"></a><span class="co"># What if BMI everyone reduced their BMI by 1. 10% 2. 20%  3. 30% from their observed BMI</span></span>
+<span id="cb2-2" class="hljs-ln-code"><a href="#cb2-2"></a></span>
+<span id="cb2-3" class="hljs-ln-code"><a href="#cb2-3"></a>reduce_10_perc <span class="ot">&lt;-</span> <span class="cf">function</span>(data, trt) {</span>
+<span id="cb2-4" class="hljs-ln-code"><a href="#cb2-4"></a>  val <span class="ot">&lt;-</span> data[[trt]] <span class="sc">-</span> (data[[trt]]<span class="sc">*</span><span class="fl">0.1</span>) <span class="co"># desired calculation</span></span>
+<span id="cb2-5" class="hljs-ln-code"><a href="#cb2-5"></a>  obs <span class="ot">&lt;-</span> data[[trt]]                     <span class="co"># observed value</span></span>
+<span id="cb2-6" class="hljs-ln-code"><a href="#cb2-6"></a>  val <span class="sc">*</span> (val <span class="sc">&gt;=</span> <span class="dv">25</span>) <span class="sc">+</span>                  <span class="co"># </span></span>
+<span id="cb2-7" class="hljs-ln-code"><a href="#cb2-7"></a>  (((obs <span class="sc">&gt;</span><span class="dv">25</span>) <span class="sc">&amp;</span> (val <span class="sc">&lt;</span><span class="dv">25</span>)) <span class="sc">*</span> <span class="dv">25</span>) <span class="sc">+</span>    <span class="co"># if BMI &gt; 25 but % reduction makes it &lt;25 (set them to 25)              </span></span>
+<span id="cb2-8" class="hljs-ln-code"><a href="#cb2-8"></a>  (obs <span class="sc">*</span> (obs <span class="sc">&lt;</span> <span class="dv">25</span>))                  <span class="co"># if BMI is &lt; 25 set as observed bmi</span></span>
+<span id="cb2-9" class="hljs-ln-code"><a href="#cb2-9"></a>}</span>
+<span id="cb2-10" class="hljs-ln-code"><a href="#cb2-10"></a></span>
+<span id="cb2-11" class="hljs-ln-code"><a href="#cb2-11"></a>reduce_20_perc <span class="ot">&lt;-</span> <span class="cf">function</span>(data, trt) {</span>
+<span id="cb2-12" class="hljs-ln-code"><a href="#cb2-12"></a>  val <span class="ot">&lt;-</span> data[[trt]] <span class="sc">-</span> (data[[trt]]<span class="sc">*</span><span class="fl">0.2</span>) <span class="co"># desired calculation</span></span>
+<span id="cb2-13" class="hljs-ln-code"><a href="#cb2-13"></a>  obs <span class="ot">&lt;-</span> data[[trt]]                     <span class="co"># observed value</span></span>
+<span id="cb2-14" class="hljs-ln-code"><a href="#cb2-14"></a>  val <span class="sc">*</span> (val <span class="sc">&gt;=</span> <span class="dv">25</span>) <span class="sc">+</span>                  <span class="co"># </span></span>
+<span id="cb2-15" class="hljs-ln-code"><a href="#cb2-15"></a>  (((obs <span class="sc">&gt;</span><span class="dv">25</span>) <span class="sc">&amp;</span> (val <span class="sc">&lt;</span><span class="dv">25</span>)) <span class="sc">*</span> <span class="dv">25</span>) <span class="sc">+</span>    <span class="co"># if BMI &gt; 25 but % reduction makes it &lt;25 (set them to 25)              </span></span>
+<span id="cb2-16" class="hljs-ln-code"><a href="#cb2-16"></a>  (obs <span class="sc">*</span> (obs <span class="sc">&lt;</span> <span class="dv">25</span>))                  <span class="co"># if BMI is &lt; 25 set as observed bmi</span></span>
+<span id="cb2-17" class="hljs-ln-code"><a href="#cb2-17"></a>}</span>
+<span id="cb2-18" class="hljs-ln-code"><a href="#cb2-18"></a></span>
+<span id="cb2-19" class="hljs-ln-code"><a href="#cb2-19"></a>reduce_30_perc <span class="ot">&lt;-</span> <span class="cf">function</span>(data, trt) {</span>
+<span id="cb2-20" class="hljs-ln-code"><a href="#cb2-20"></a>  val <span class="ot">&lt;-</span> data[[trt]] <span class="sc">-</span> (data[[trt]]<span class="sc">*</span><span class="fl">0.3</span>) <span class="co"># desired calculation</span></span>
+<span id="cb2-21" class="hljs-ln-code"><a href="#cb2-21"></a>  obs <span class="ot">&lt;-</span> data[[trt]]                     <span class="co"># observed value</span></span>
+<span id="cb2-22" class="hljs-ln-code"><a href="#cb2-22"></a>  val <span class="sc">*</span> (val <span class="sc">&gt;=</span> <span class="dv">25</span>) <span class="sc">+</span>                  <span class="co"># </span></span>
+<span id="cb2-23" class="hljs-ln-code"><a href="#cb2-23"></a>  (((obs <span class="sc">&gt;</span><span class="dv">25</span>) <span class="sc">&amp;</span> (val <span class="sc">&lt;</span><span class="dv">25</span>)) <span class="sc">*</span> <span class="dv">25</span>) <span class="sc">+</span>    <span class="co"># if BMI &gt; 25 but % reduction makes it &lt;25 (set them to 25)              </span></span>
+<span id="cb2-24" class="hljs-ln-code"><a href="#cb2-24"></a>  (obs <span class="sc">*</span> (obs <span class="sc">&lt;</span> <span class="dv">25</span>))                  <span class="co"># if BMI is &lt; 25 set as observed bmi</span></span>
+<span id="cb2-25" class="hljs-ln-code"><a href="#cb2-25"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <aside class="notes">
 
@@ -1016,19 +1361,77 @@
       }</style></aside>
 <!------------------------------------Slide 19---------------------------------->
 </section>
-<section id="section-19" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
+<section id="current-work-implementation-3" class="slide level2" data-auto-animate="true" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h2 data-id="quarto-animate-title"><span class="pink">CURRENT</span> WORK (Implementation)</h2>
+<h3 id="mtp-example-02--categorical-exposure"><span class="blue" data-id="ex1">MTP [Example 02- Categorical exposure]</span></h3>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me |</span> <span style="opacity:0.20">My Work |</span> My Plans</p>
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
 </div>
 </div>
-<p><img data-src="img/whatif.png" class="absolute" style="opacity: 0.1;top: 10%; left: 0%; width: 1000px; "></p>
-<div class="absolute" style="left:-10%;top:0%; font-weight:bold">
-<p><span class="red">Reasearch</span> activities</p>
-</div>
-<div class="absolute" style="left:-10%;top:18%;text-align:center">
 
+<img data-src="img/ex2.png" class="r-stretch"><aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!------------------------------------Slide 19---------------------------------->
+</section>
+<section id="current-work-implementation-4" class="slide level2 scrollable" data-auto-animate="true" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h2 data-id="quarto-animate-title"><span class="pink">CURRENT</span> WORK (Implementation)</h2>
+<h3 id="mtp-example-03--poverty-income-ratio"><span class="blue" data-id="ex1">MTP [Example 03- poverty income ratio]</span></h3>
+<div class="absolute" style="top: 0px; right: -10%; ">
+<div class="sectionhead" data-id="head">
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
+</div>
+</div>
+<center>
+<div width="800">
+<p><img data-src="img/ex3.png" width="800"></p>
+</div>
+</center>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!------------------------------------Slide 20---------------------------------->
+</section>
+<section id="current-work-implementation-5" class="slide level2" data-auto-animate="true" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h2 data-id="quarto-animate-title"><span class="pink">CURRENT</span> WORK (Implementation)</h2>
+<h3 id="mtp---estimator"><span class="blue" data-id="ex1">MTP - Estimator</span></h3>
+<div class="absolute" style="top: 0px; right: -10%; ">
+<div class="sectionhead" data-id="head">
+<p><span style="opacity:0.20">About Me |</span> <strong>My Work</strong> <span style="opacity:0.20">| My Plans</span></p>
+</div>
+</div>
+<ul>
+<li class="fragment">My favorite estimation tool is <strong>doubly-robust TMLE</strong> becasue of its many attractive features in estimationg defined MTPs</li>
+</ul>
+<ol start="2" type="1">
+<li class="fragment"><p>Semi-parametric</p></li>
+<li class="fragment"><p>Can handle time-varing exposures/confounders</p></li>
+<li class="fragment"><p>Can handle censoring</p></li>
+<li class="fragment"><p>Can use machine learning algorithms to model exposure and outcome flexibly</p></li>
+</ol>
+<div class="refs2">
+<p>Mark J. van der Laan, Sherri Rose. Targeted Learning:Causal Inference for Observational and Experimental Data. 2011. https://doi.org/10.1007/978-1-4419-9782-1</p>
 </div>
 <aside class="notes">
 
@@ -1045,24 +1448,59 @@
       }</style></aside>
 <!------------------------------------Slide 20---------------------------------->
 </section>
-<section id="section-20" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
+<section id="my-plans" class="slide level2" data-auto-animate="true" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h2 data-id="quarto-animate-title">MY <span class="green">PLANS</span></h2>
+<h3 id="research"><span class="blue">Research</span></h3>
 <div class="absolute" style="top: 0px; right: -10%; ">
 <div class="sectionhead" data-id="head">
-<p><span style="opacity:0.20">About Me |</span> <span style="opacity:0.20">My Work |</span> My Plans</p>
+<p><span style="opacity:0.20">About Me |</span> <span style="opacity:0.20">My Work |</span> <strong>My Plans</strong></p>
 </div>
 </div>
-<p><img data-src="img/whatif.png" class="absolute" style="opacity: 0.1;top: 10%; left: 0%; width: 1000px; "></p>
-<div class="absolute" style="left:-10%;top:0%; font-weight:bold">
-<p>Overall <span class="red">career</span> plans</p>
+<ul>
+<li class="fragment"><p>Keep learning to understand causal inference more deeply in order to use their full potential within oral epidemiology.</p></li>
+<li class="fragment"><p>Investigate meaningful causal questions related to oral health inequlities using good qulity longitudinal data sources.</p></li>
+<li class="fragment"><p>Extending my current methods for health policy analysis.</p></li>
+<li class="fragment"><p>Expanding the scope of my research activities by understanding methods such as microsimulations</p></li>
+<li class="fragment"><p>Writing good quality papers to improve my research portfolio</p></li>
+</ul>
+</section>
+<section id="my-plans-1" class="slide level2" data-auto-animate="true" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h2 data-id="quarto-animate-title">MY <span class="green">PLANS</span></h2>
+<h3 id="overall--career"><span class="blue">Overall- Career</span></h3>
+<div class="absolute" style="top: 0px; right: -10%; ">
+<div class="sectionhead" data-id="head">
+<p><span style="opacity:0.20">About Me |</span> <span style="opacity:0.20">My Work |</span> <strong>My Plans</strong></p>
 </div>
-<div class="absolute" style="left:-10%;top:18%;text-align:center">
+</div>
+<ul>
+<li class="fragment"><p>Establish myself as a leading dental public health researcher</p></li>
+<li class="fragment"><p>Expand my collaborations</p></li>
+<li class="fragment"><p>Get more involved in teaching/ mentoring</p></li>
+<li class="fragment"><p>Write a book - a very non-technical easy to understand causal inference book for dental researchers</p></li>
+</ul>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="thank-you-very-much-for-the-opprtunity-to-present-my-work" class="title-slide slide level1 center" data-auto-animate="true" data-background-image="img/whatif.png" data-background-opacity="0.1">
+<h1 data-id="quarto-animate-title">Thank you very much for the opprtunity to present my work 🙏</h1>
+
+<img src="img/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 
 </div>
-<div class="footer footer-default">
-<p>Upul Cooray</p>
-</div>
 </section>
+
+
     </div>
   </div>
 
@@ -1088,13 +1526,13 @@
       // https://revealjs.com/config/
       Reveal.initialize({
 'controlsAuto': true,
-'previewLinksAuto': true,
+'previewLinksAuto': false,
 'smaller': false,
 'pdfSeparateFragments': false,
-'autoAnimateEasing': "ease-in-out",
-'autoAnimateDuration': 0.8,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1115,7 +1553,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -1217,17 +1655,17 @@
         hideCursorTime: 5000,
 
         // Opens links in an iframe preview overlay
-        previewLinks: false,
+        previewLinks: true,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'fade',
 
         // Transition speed (default/fast/slow)
-        transitionSpeed: 'default',
+        transitionSpeed: 'fast',
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'none',
+        backgroundTransition: 'fade',
 
         // Number of slides away from the current that are visible
         viewDistance: 3,
@@ -1273,6 +1711,38 @@
           RevealZoom
         ]
       });
+    </script>
+    
+    <style>
+      .hide {
+        display: none !important;
+      }
+    </style>
+
+
+    <script>
+      function remove() {
+        let footer = document.querySelector('div.footer');
+        let slideNo = document.querySelector('div.slide-number');
+        let logoImg = document.querySelector(".slide-logo");
+        slideNo.classList.add('hide');
+        footer.classList.add('hide');
+        logoImg.classList.add('hide');
+      
+        Reveal.on('slidechanged', event => {  
+          if(Reveal.isFirstSlide()) {
+            slideNo.classList.add('hide');
+            footer.classList.add('hide');
+            logoImg.classList.add('hide');
+          } else {
+            slideNo.classList.remove('hide');
+            footer.classList.remove('hide');
+            logoImg.classList.remove('hide');
+          }
+        });
+      }
+      
+      window.onload = remove();
     </script>
     
     <script>

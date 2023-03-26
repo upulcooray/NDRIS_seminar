@@ -1,26 +1,36 @@
 ---
-date: "`r format(Sys.time(), '%d %B, %Y')`"
+date: "`r format(Sys.time(), '%d-%b-%y')`"
+title: "Modelling *WHAT IF* questions <br>using observational data"
+author: Upul Cooray
+institute: "Department International Oral Health<br> Tohoku University, Japan"
 format: 
   revealjs:
-    theme: [moon, css/custom.scss]
-    preview-links: auto
-    footer: "Upul Cooray"
-    auto-animate-easing: ease-in-out
-    auto-animate-unmatched: true
-    auto-animate-duration: 0.8
+      theme: [simple,css/kakashi.scss]
+      logo: img/logo.png
+      slide-number: c/t
+      show-slide-number: all
+      title-slide-attributes:
+          data-background-image: img/whatif.png
+          data-background-size: cover 
+          data-background-opacity: "0.1"
+          #data-background-color: "#23373B"
+          # data-color: "#EDEEF"
+      preview-links: true
+      code-overflow: wrap
+      menu: false
+      incremental: true
+      auto-animate: true
+      transition: fade
+      background-transition: fade
+      transition-speed: fast
+      include-after-body: css/clean.html
 ---
 
-![](img/causal.png){.absolute top="70%" right="-1%" width="475"}
-
-::: {.ti .absolute top="20%" right="0%"}
-How I Develop Intuition for
-
-[*Causal Inference*]{.purple}
-:::
+##  {background-image="img/whatif.png" background-opacity="0.1"}
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \| My Work \| My Plans]{style="opacity:0.20"}
+**About Me** [\| My Work \| My Plans]{style="opacity:0.20"}
 :::
 :::
 
@@ -30,90 +40,97 @@ library(kableExtra)
 library(tidyverse)
 ```
 
-![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+::: columns
+::: {.column width="25%"}
+<center>About **ME**</center>
 
-
-<!------------------------------------Slide 2---------------------------------->
-##  {auto-animate="true"} 
-
-::: {.absolute top="0" right="-10%"}
-::: {.sectionhead data-id="head"}
-About Me [\| My Work \| My Plans]{style="opacity:0.20"}
-:::
+<center>![](img/pic.png){width="200"}</center>
 :::
 
-
-![](img/pic.png){.absolute top="15%" left="-1%" width="200"}
-
-::: {.absolute data-id="me" style="left:-1%;top:45%; font-weight:bold"}
-ABOUT [ME]{.purple}
+::: {.column width="10%"}
 :::
 
+::: {.column width="65%"}
+<br>
 
-::: {.absolute style="left:25%;top:15%;"}
--   A dentist
+-   A Dentist
 
 -   Graduated from University of Peradeniya, Sri Lanaka (2011)
 
--   Clinical dentist \~ 5 Years
+-   Clinical Dentist \~ 4 Years
 
 -   MSc Dental Public Health at UCL (2015-2016)
 
 -   PhD Dental Public Health at Tohoku University, Japan (2018-2022)
 :::
+:::
 
+. . .
 
-<!------------------------------------Slide 3---------------------------------->
-##  {auto-animate="true"}
+[Currently work as an assistant professor at Tohoku University]{.center}
+
+<!------------------------------------Slide 2---------------------------------->
+
+##  {background-image="img/whatif.png" background-opacity="0.1" auto-animate="true"}
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-About Me [\| My Work \| My Plans]{style="opacity:0.20"}
+**About Me** [\| My Work \| My Plans]{style="opacity:0.20"}
 :::
 :::
 
+::: columns
+::: {.column width="25%"}
+<center>MY **INTERESTS**</center>
 
-![](img/pic.png){.absolute top="15%" left="-1%" width="200"}
+<center>![](img/pic.png){width="200"}</center>
 
-::: {.absolute data-id="me" style="left:-4%;top:45%; font-weight:bold"}
-MY [INTERESTS]{.purple}
-
-(CONCEPTS)
+<center>[CONCEPTS]{.purple}</center>
 :::
 
+::: {.column width="10%"}
+:::
 
-::: {.absolute style="left:25%;top:18%;"}
--   Social Determinants of Health
+::: {.column width="65%"}
+<br>
 
--   Health Inequalities
+-   Social determinants of health
 
--   Common Risk Factors
+-   Oral health inequalities
 
--   Evaluation of Health Policies
+-   Association between oral health & general health
+
+-   Evaluation of health policies
 
 -   Reproducible research
 :::
+:::
 
-<!------------------------------------Slide 4---------------------------------->
-##  {auto-animate="true"}
+<!------------------------------------Slide 3---------------------------------->
+
+##  {background-image="img/whatif.png" background-opacity="0.1" auto-animate="true"}
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-About Me [\| My Work \| My Plans]{style="opacity:0.20"}
+**About Me** [\| My Work \| My Plans]{style="opacity:0.20"}
 :::
 :::
 
+::: columns
+::: {.column width="25%"}
+<center>MY **INTERESTS**</center>
 
-![](img/pic.png){.absolute top="15%" left="-1%" width="200"}
+<center>![](img/pic.png){width="200"}</center>
 
-::: {data-id="me" .absolute style="left:-4%;top:45%; font-weight:bold"}
-MY [INTERESTS]{.purple}
-
-(METHODS)
+<center>[METHODS]{.purple}</center>
 :::
 
+::: {.column width="10%"}
+:::
 
-::: {.absolute style="left:25%;top:18%;"}
+::: {.column width="65%"}
+<br>
+
 -   Econometric methods for causal inference
 
 -   Modern causal inference frameworks for question based analytical approach
@@ -124,25 +141,33 @@ MY [INTERESTS]{.purple}
 
 -   Doubly-robust estimators (TMLE, SDR)
 :::
+:::
 
-<!------------------------------------Slide 5---------------------------------->
-##  {auto-animate="true"}
+<!------------------------------------Slide 3---------------------------------->
 
-::: { .absolute top="0" right="-10%"}
+##  {background-image="img/whatif.png" background-opacity="0.1" auto-animate="true"}
+
+::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-About Me [\| My Work \| My Plans]{style="opacity:0.20"}
+**About Me** [\| My Work \| My Plans]{style="opacity:0.20"}
 :::
 :::
 
-![](img/pic.png){.absolute top="15%" left="-1%" width="200"}
+::: columns
+::: {.column width="25%"}
+<center>MY **INTERESTS**</center>
 
-::: {.absolute  data-id="me" style="left:-4%;top:45%; font-weight:bold"}
-MY [INTERESTS]{.purple}
+<center>![](img/pic.png){width="200"}</center>
 
-(OTHER)
+<center>[OTHER]{.purple}</center>
 :::
 
-::: {.absolute style="left:25%;top:18%;"}
+::: {.column width="10%"}
+:::
+
+::: {.column width="65%"}
+<br>
+
 -   R programming and functional programming in general
 
 -   Learning new concepts (almost anything)
@@ -153,76 +178,61 @@ MY [INTERESTS]{.purple}
 
 -   Playing with my kids
 :::
+:::
 
 <!------------------------------------Slide 6---------------------------------->
-## {auto-animate="true"}
 
-::: { .absolute top="0" right="-10%"}
+## [PREVIOUS]{.green} WORK {auto-animate="true"}
+
+### (Econometric Methods)
+
+::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
 :::
 :::
 
-::: {.absolute style="right:-15%;top:50%; font-weight:bold"}
-[PREVIOUS]{.green} WORK
-
-(Econometric Methods)
-:::
-
-![](img/rdabs.png){data-id="rd" .absolute top="0%" left="-11%" width="900"}
-
+![](img/rdabs.png){data-id="rd" width="900" height="100%"}
 
 ::: notes
 This is where my interest on econometric methods and causal inference in general sparked I think econometric methods are very good in accounting for unmeasured confounding But difficult to find data and proper use cases with epidemiological survey data, Eg: finding appropriate strong IV, Data to simulate a synthetic control
 :::
 
 <!------------------------------------Slide 7---------------------------------->
-##  {auto-animate="true"}
+
+## [PREVIOUS]{.green} WORK {auto-animate="true"}
+
+### (Econometric Methods)
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
 :::
 :::
 
-::: {.absolute style="right:-15%;top:50%; font-weight:bold"}
-[PREVIOUS]{.green} WORK
+![](img/RD.png){data-id="rd" width="800"}
 
-(Econometric Methods)
-:::
-
-
-![](img/RD.png){.absolute data-id="rd" top="0%" left="-11%" width="900"}
-
-<br><br>
-
-![](img/rdplot.png){.absolute left="-11%" width="900"}
-
+![](img/rdplot.png){width="800"}
 
 ::: notes
 This is where my interest on econometric methods and causal inference in general sparked I think econometric methods are very good in accounting for unmeasured confounding But difficult to find data and proper use cases with epidemiological survey data, Eg: finding appropriate strong IV, Data to simulate a synthetic control
 :::
 
-
 <!------------------------------------Slide 8---------------------------------->
-##  {auto-animate="true"}
+
+## [PREVIOUS]{.purple} WORK {auto-animate="true"}
+
+### (Machine Learning)
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
 :::
 :::
 
-::: {.absolute data-id="previous" style="right:-10%;top:50%; font-weight:bold"}
-[PREVIOUS]{.green} WORK
+![](img/ml1.png){data-id="ml1" width="800"}
 
-(Machine Learning)
-:::
-
-![](img/ml1.png){.absolute data-id="ml1" left="-11%" top="-1%" width="900"}
-
-![](img/ml2.png){.absolute left="-11%" width="900" top="40%"}
-
+![](img/ml2.png){width="800"}
 
 ::: notes
 I got bored during the initial lock down period of the pandemic so I wanted to understand little bit about machine learning and started a toy project to predict tooth loss using survey data and I ended up publishing my results in SSM.
@@ -231,147 +241,112 @@ and then I used similar methods to work on a project with a Japanese collegeue t
 :::
 
 <!------------------------------------Slide 9---------------------------------->
-##  {auto-animate="true"}
+
+## [PREVIOUS]{.purple} WORK {auto-animate="true"}
+
+### (Machine Learning)
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
 :::
 :::
 
-::: {.absolute data-id="previous" style="right:-10%;top:50%; font-weight:bold"}
-[PREVIOUS]{.green} WORK
+![](img/ml1-2.png){data-id="ml1" width="800"}
 
-(Machine Learning)
-:::
-
-
-![](img/ml1-2.png){.absolute data-id="ml1" top="-1%" width="900" left="-11%"}
-
-![](img/shap1.png){.absolute top="20%" width="900" left="-11%"}
-
+![](img/shap1.png){width="750"}
 
 ::: notes
 In these studies I tried to adopt explainable ML methods to get some meaningful interpretations out of machine learning predictions I was working on stata prior to these project but I learn a lot of python just to implement these two studies.
 However, currently my workflow is exclusively based on R.
 :::
 
-
 <!------------------------------------Slide 10---------------------------------->
-##  {auto-animate="true"}
+
+## [PREVIOUS]{.purple} WORK {auto-animate="true"}
+
+### (Causal inference + TMLE + Super Learner)
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
 :::
 :::
 
+<br>
 
-::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
-[CURRENT]{.red} WORK
-
-(Causal inference + Machine Learning)
-:::
-
-![](img/accepted.png){.absolute top="18%" left="-11%" width="900"}
+![](img/accepted.png){width="900"}
 
 <br> <br>
-
 
 ::: notes
 :::
 
 <!------------------------------------Slide 11---------------------------------->
-##  {auto-animate="true"}
 
-::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
-[CURRENT]{.red} WORK (Intuition)
-:::
+## [CURRENT]{.pink} WORK {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1"}
 
-![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
-
-<br> <br>
+### (Intuition)
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
 :::
 :::
 
-::: {.absolute style="left:-10%;top:18%;"}
--   We usually default to a "**model-based**" analytic approach in oral epidemiological studies
+<br>
 
-    [E.g.:]{.f-25}
+<center>
 
-    -   [Binary outcome - run a logistic regression]{.f-25}
-    -   [Time-to-event outcome - Cox-regression]{.f-25}
+[We usually default to <br>a "**model-based**" analytic approach <br>in oral epidemiological studies]{.huge}
+
+::: {.small .ul2}
+-   Binary outcome --\> run a logistic regression
+-   Time-to-event outcome --\> Cox-regression
 :::
+
+</center>
 
 ::: notes
 :::
 
 <!------------------------------------Slide 12---------------------------------->
-##  {auto-animate="true"}
 
-::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
-[CURRENT]{.red} WORK (Intuition)
+## [CURRENT]{.pink} WORK (Intuition) {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1"}
 
-[Some limitations of model based approaches]{.blue .f-25}
-:::
-
-![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
-
-<br> <br>
+### [Some limitations of model based approaches]{.blue}
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
 :::
 :::
 
-::: {.absolute .incremental .semi-fade-out style="left:-10%;top:18%;"}
--   Regression coefficients often do not represent well-defined effects <br> [Hernán MA. The hazards of hazard ratios. Epidemiology. 2010;21(1):13-15]{.f-20}
+-   Regression coefficients often do not represent well-defined effects [Hernán MA. The hazards of hazard ratios. Epidemiology. 2010;21(1):13-15]{.refs}
 
 -   Modelling assumptions used are rarely correct
 
--   Regression models cannot correctly handle time-dependent feedback among confounders, treatment, and the outcome <br> [Robins JM. Hernán MA. Causal Inference: What If]{.f-20}
+-   Regression models cannot correctly handle time-dependent feedback among confounders, treatment, and the outcome [Robins JM. Hernán MA. Causal Inference: What If]{.refs}
 
--   Model-first approaches fail to account for the variance induced during model selection <br> [Smith G. Step away from step wise. J Big Data. 2018;5(1):1-12]{.f-20}
-:::
+-   Model-first approaches fail to account for the variance induced during model selection [Smith G. Step away from step wise. J Big Data. 2018;5(1):1-12]{.refs}
 
 ::: notes
 :::
 
 <!------------------------------------Slide 13---------------------------------->
-##  {auto-animate="true"}
+
+## [CURRENT]{.pink} WORK (Intuition) {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1"}
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
 :::
 :::
 
-![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
-
-::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
-[CURRENT]{.red} WORK (Intuition)
-
-:::
-
-
-::: {.absolute style="left:-10%;top:18%;text-align:center"}
-A potential solution would be 
-
-**"Question Based"** approach 
-
-:::
-
-:::{.absolute style="left:-10%;top:50%" .f-25}
-PetersenML,vanderLaanMJ.Causalmodelsandlearningfromdata:integratingcausalmodelingand
-statistical estimation. Epidemiology. 2014;25(3):418-426. 
-
-:::
-
+<br><br>
+<center>
+[A potential solution would be to adapt **"Question Based"** approaches ^[Petersen ML,vander Laan MJ. Causal models and learning from data: integrating causal modeling and statistical estimation. Epidemiology. 2014;25(3):418-426.] ]{.huge}
+</center>
 
 
 
@@ -379,80 +354,26 @@ statistical estimation. Epidemiology. 2014;25(3):418-426.
 :::
 
 <!------------------------------------Slide 14---------------------------------->
-##  {auto-animate="true"}
+
+## [CURRENT]{.pink} WORK (Intuition) {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1"}
+
+### [Potential outcome/ Counterfactual framework]{.blue}
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
 :::
 :::
 
-![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+<br>
 
-::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
-[CURRENT]{.red} WORK (Intuition)
-
+:::{.center}
+[What if]{.red} *everyone EXPOSED* ([A=1]{.red}) vs *everyone UNEXPOSED* ([A=0]{.blue})
 :::
 
-
-::: {.absolute style="left:-10%;top:18%;text-align:center"}
-
-Potential outcome/ Counterfactual framework 
-
-Asking **"what if"** questions 
-
-:::
-
-
-::: notes
-:::
-
-<!-----------------------------------Slide 15---------------------------------->
-##  {auto-animate="true"}
-
-::: {.absolute top="0" right="-10%"}
-::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
-:::
-:::
-
-![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
-
-::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
-[CURRENT]{.red} WORK (Intuition)
-
-:::
-
-
-::: {.absolute style="left:-10%;top:18%;text-align:center"}
-
-Key Asumptions
-
-:::
-
-
-::: notes
-:::
-
-<!-----------------------------------Slide 15---------------------------------->
-##  {auto-animate="true"}
-
-::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
-[CURRENT]{.red} WORK (Intuition for the methods)
-:::
-
-::: {.absolute top="0" right="-10%"}
-::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
-:::
-:::
-
-![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
-
-<br><br><br>
 
 ::: columns
-::: {.column width="40%"}
+::: {.column width="22%"}
 ```{r}
 #| echo: false
 set.seed(1112)
@@ -461,13 +382,24 @@ tibble(i= c(paste0(1:5), "...", "n"),
       A= c(sample(0:1, 5,T) %>% paste0(), "...", "0"),
       Y= c(sample(2:8, 5,T) %>% paste0(), "...", "3"),
       ) %>% 
-  kableExtra::kable(caption = "Real data") %>% 
-  kable_styling(font_size = 30)
+ mutate(
+    Y= cell_spec(Y, color =  ifelse(A=="0" | A=="...", "blue" , "red")),
+    A= cell_spec(A, color = ifelse(A == "1" , "red", "blue"))
+    
+    ) %>% 
+  
+  kable(  format = "html", escape = F, caption = "Real data") %>% 
+  # kableExtra::kbl(caption = "Causal model") %>% 
+  kable_styling(font_size = 30) %>% 
+  column_spec(1,italic = T)
+
 
 ```
 :::
 
-::: {.column width="60%"}
+
+
+::: {.column width="39%"}
 ```{r}
 #| echo: false
 
@@ -479,174 +411,521 @@ tibble(i= c(paste0(1:5), "...", "n"),
       `Y(0)`= case_when(A=="0" ~ Y, A=="..." ~ Y, T~ "NA"),
       `Y(1)`= case_when(A=="1" ~ Y, A=="..." ~ Y, T~ "NA"),
       ) %>% select(-Y) %>% 
-  kableExtra::kable(caption = "Causal model") %>% 
-  kable_styling(font_size = 30)
+  mutate(
+    `Y(0)`= cell_spec(`Y(0)`, color =  "blue", 
+                      background = ifelse(A=="0" | A=="...", "" , "#eaf037AB")),
+    `Y(1)`= cell_spec(`Y(1)`, color =  "red", 
+                      background = ifelse(A=="1" | A=="...", "" , "#eaf037AB")),
+    A= cell_spec(A, color = ifelse(A == "1" , "red", "blue"))
+    
+    ) %>% 
+  
+  kable(  format = "html", escape = F, caption = "Causal model") %>% 
+  # kableExtra::kbl(caption = "Causal model") %>% 
+  kable_styling(font_size = 30) %>% 
+  column_spec(1,italic = T)
 
 ```
 :::
+
+::: {.column width="39%"  data-id="tab1"}
+```{r}
+#| echo: false
+
+set.seed(1112)
+tibble(i= c(paste0(1:5), "...", "n"),
+      X= c(sample(1:10, 5,T) %>% paste0(), "...", "6"),
+      A= c(sample(0:1, 5,T) %>% paste0(), "...", "0"),
+      Y= c(sample(2:8, 5,T) %>% paste0(), "...", "3"),
+      `Y(0)`= case_when(A=="0" ~ Y, A=="..." ~ Y, T~ "NA"),
+      `Y(1)`= case_when(A=="1" ~ Y, A=="..." ~ Y, T~ "NA"),
+      ) %>% select(-Y) %>% 
+  mutate(`Y(0)`= c(5,7,5,3,5,"...",3),
+         `Y(1)`= c(2,3,2,8,2,"...",4)) %>% 
+  
+  mutate(
+    `Y(0)`= cell_spec(`Y(0)`, color =  "blue", 
+                      background = ifelse(A=="0" | A=="...", "" , "#eaf037AB")),
+    `Y(1)`= cell_spec(`Y(1)`, color =  "red", 
+                      background = ifelse(A=="1" | A=="...", "" , "#eaf037AB")),
+    A= cell_spec(A, color = ifelse(A == "1" , "red", "blue"))
+    
+    ) %>% 
+  
+  kable(  format = "html", escape = F, caption = "Causal model") %>% 
+  # kableExtra::kbl(caption = "Causal model") %>% 
+  kable_styling(font_size = 30) %>% 
+  column_spec(1,italic = T)
+
+```
+:::
+
+:::
+
+
+::: notes
+no such thing as a "method for causal inference"
+:::
+
+<!-----------------------------------Slide 15---------------------------------->
+
+## [CURRENT]{.pink} WORK (Intuition) {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1"}
+
+### [ATE and Beyond ATE]{.blue}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+
+::::columns
+::: {data-id="tab1" .column width="30%"}
+```{r}
+#| echo: false
+
+
+set.seed(1112)
+tibble(i= c(paste0(1:5), "...", "n"),
+      X= c(sample(1:10, 5,T) %>% paste0(), "...", "6"),
+      A= c(sample(0:1, 5,T) %>% paste0(), "...", "0"),
+      Y= c(sample(2:8, 5,T) %>% paste0(), "...", "3"),
+      `Y(0)`= case_when(A=="0" ~ Y, A=="..." ~ Y, T~ "NA"),
+      `Y(1)`= case_when(A=="1" ~ Y, A=="..." ~ Y, T~ "NA"),
+      ) %>% select(-Y) %>% 
+  mutate(`Y(0)`= c(5,7,5,3,5,"...",3),
+         `Y(1)`= c(2,3,2,8,2,"...",4)) %>% 
+  
+  mutate(
+    `Y(0)`= cell_spec(`Y(0)`, color =  "blue", 
+                      background = ifelse(A=="0" | A=="...", "" , "#eaf037AB")),
+    `Y(1)`= cell_spec(`Y(1)`, color =  "red", 
+                      background = ifelse(A=="1" | A=="...", "" , "#eaf037AB")),
+    A= cell_spec(A, color = ifelse(A == "1" , "red", "blue"))
+    
+    ) %>% 
+  
+  kable(  format = "html", escape = F, caption = "Causal model") %>% 
+  # kableExtra::kbl(caption = "Causal model") %>% 
+  kable_styling(font_size = 20) %>% 
+  column_spec(1,italic = T)
+
+```
+
+:::{.small}
+$$
+\text{ATE}:=\mathbb{E}[Y(1)-Y(0)]
+$$
+:::
+:::
+
+
+::: {.column width="70%" .fragment .nonincremental}
+ATE can be a causal estimate given;
+
+1. POSITIVITY 
+
+
+    [Some positive probability of getting either `A=1`﻿ or  `A=0`,﻿ based on their covariates (`X`)]{.refs2} 
+
+2. UNCONFONDEDNESS
+
+
+    [All the common causes of `Y(a)`﻿ and `A`﻿ must be contained in `X` 
+    <br>Other names: Ignorability/ Exogeneity]{.refs2}﻿
+   
+
+:::
+
+::::
+
+
+
+::: notes
+:::
+
+<!-----------------------------------Slide 15---------------------------------->
+
+## [CURRENT]{.pink} WORK (Intuition) {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1"}
+
+### [Some limitations of ATE]{.blue}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+
+:::: columns
+::: {.column width="30%"}
+
+**Positivity violation**
+
+!["Reality"](img/real.png){width="200" data-id="real"}
+
+![A= 1 (counterfactual)](img/reD.png){width="200" data-id="a1"}
+
+![A= 0 (counterfactual)](img/BLUE.png){width="200" data-id="a0"}
+:::
+
+::: {.column width="30%" .fragment}
+
+**Unrealistic contrast/ Static interventions**
+
+
+![A= 1 ](img/reD.png){width="250" data-id="a1"}
+
+[vs]{style="padding-left:120px;"}
+
+
+![A= 0 ](img/BLUE.png){width="250" data-id="a1"}
+:::
+
+
+:::{.column width="40%" .fragment .ul2}
+
+
+**Continuous/ categorical exposures**
+<br>
+
+- Estimation & Interpretation is not straightforward
+
+:::{.fragment .refs2}
+Think beyond ATE to minimize positivity violation and to obtain more realistic contrasts
+:::
+
+:::
+
+
+::::
+
+:::{.absolute bottom="-10%"}
+[Iván Díaz, Nicholas Williams, Katherine L. Hoffman & Edward J. Schenck (2021) Nonparametric Causal Effects Based on Longitudinal Modified Treatment Policies, Journal of the American Statistical Association]{.refs1}
 :::
 
 
 ::: notes
 :::
 
-
 <!------------------------------------Slide 15---------------------------------->
-##  {auto-animate="true"}
+
+## [CURRENT]{.pink} WORK (Intuition) {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1"}
+
+### [Alternative interventions]{.blue}
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
 :::
 :::
 
-![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+:::: {.columns  }
+:::{.column width=33% }
 
-::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
-[CURRENT]{.red} WORK (Intuition)
+![](img/real.png){width="300" data-id="real" style="padding-top:50px"}
+[Observed]{style="padding-left:2em"}
+:::
+
+:::{.column width=33%}
+
+![](img/dynamic.png){width="300" style="padding-top:50px"}
+Dynamic intervention
 
 :::
 
-
-::: {.absolute style="left:-10%;top:18%;text-align:center"}
-
-Limitations of conventional approach
+:::{.column width=33%}
+![](img/mtp.png){width="300" style="padding-top:50px"}
+Modified intervention
 
 :::
+
+::::
+
+- Possibility of positivity violation is low
+
+- Can easily model non binary exposures
+
+- Gives flexibility to ask more realistic **what if** questions 
 
 
 ::: notes
 :::
 
 <!------------------------------------Slide 16---------------------------------->
-##  {auto-animate="true"}
+
+## [CURRENT]{.pink} WORK (Intuition) {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1"}
+
+### [What is a modified treatment policy?]{.blue}
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
 :::
 :::
 
-![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
-
-::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
-[CURRENT]{.red} WORK (Intuition)
-
+:::{.infobox} 
+A modified treatment policy (MTP) is defined as an intervention that can depend on the natural value of the exposure.
 :::
 
 
-::: {.absolute style="left:-10%;top:18%;text-align:center"}
+- We start by defining our casual question as a MTP
 
-methods to overcomes above limitations
+- Often standard parametric approaches cannot handle these problems
 
+
+:::{.fragment}
+<center>![](img/lmtp-paper.png){width="600"}</center>
 :::
-
 
 ::: notes
 :::
 
 <!------------------------------------Slide 17---------------------------------->
-##  {auto-animate="true"}
+
+## [CURRENT]{.pink} WORK (Implementation) {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1"}
+
+### [MTP [Example 01]]{.blue data-id="ex1"}
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
 :::
 :::
 
-![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
-
-::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
-[CURRENT]{.red} WORK (Intuition)
-
-:::
+![](img/bmi.png)
 
 
-::: {.absolute style="left:-10%;top:18%;text-align:center"}
-
-Examples from my work
-
-:::
 
 
 ::: notes
 :::
 
 <!------------------------------------Slide 18---------------------------------->
-##  {auto-animate="true"}
+
+## [CURRENT]{.pink} WORK (Implementation) {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1"}
+
+### [MTP [Example 01]: Impact of BMI changes on risk of back pain]{.blue data-id="ex1"}
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} My Work [\| My Plans]{style="opacity:0.20"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
 :::
 :::
 
-![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+```{r}
+#| echo: true
+#| code-line-numbers: "|1|3-4,11-12,19-20|6|"
 
-::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
-[CURRENT]{.red} WORK (Intuition)
+# What if BMI everyone increased their BMI by 1. 10% 2. 20%  3. 30% from their observed BMI
 
-:::
+increase_10_perc <- function(data, trt) {
+  val <- data[[trt]] + (data[[trt]]*0.1) # desired calculation
+  obs <- data[[trt]]                     # observed value
+  val * (val <= 40) +   # 40 is set as maximum biologically plausible BMI
+  (((obs <40) & (val>40)) * 40)+
+  (obs * (obs > 40))
+}
+
+increase_20_perc <- function(data, trt) {
+  val <- data[[trt]] + (data[[trt]]*0.2) # desired calculation
+  obs <- data[[trt]]                     # observed value
+  val * (val <= 40) +   # 40 is set as maximum biologically plausible BMI
+  (((obs <40) & (val>40)) * 40)+
+  (obs * (obs > 40))
+}
+
+increase_30_perc <- function(data, trt) {
+  val <- data[[trt]] + (data[[trt]]*0.3) # desired calculation
+  obs <- data[[trt]]                     # observed value
+  val * (val <= 40) +   # 40 is set as maximum biologically plausible BMI
+  (((obs <40) & (val>40)) * 40)+
+  (obs * (obs > 40))
+}
 
 
-::: {.absolute style="left:-10%;top:18%;text-align:center"}
+```
 
-More examples
 
-:::
 
 
 ::: notes
 :::
+
+<!------------------------------------Slide 18---------------------------------->
+
+## [CURRENT]{.pink} WORK (Implementation) {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1"}
+
+### [MTP [Example 01]: Impact of BMI changes on risk of back pain]{.blue data-id="ex1"}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+```{r}
+#| echo: true
+#| code-line-numbers: "|1|3-4,11-12,19-20|7|"
+
+# What if BMI everyone reduced their BMI by 1. 10% 2. 20%  3. 30% from their observed BMI
+
+reduce_10_perc <- function(data, trt) {
+  val <- data[[trt]] - (data[[trt]]*0.1) # desired calculation
+  obs <- data[[trt]]                     # observed value
+  val * (val >= 25) +                  # 
+  (((obs >25) & (val <25)) * 25) +    # if BMI > 25 but % reduction makes it <25 (set them to 25)              
+  (obs * (obs < 25))                  # if BMI is < 25 set as observed bmi
+}
+
+reduce_20_perc <- function(data, trt) {
+  val <- data[[trt]] - (data[[trt]]*0.2) # desired calculation
+  obs <- data[[trt]]                     # observed value
+  val * (val >= 25) +                  # 
+  (((obs >25) & (val <25)) * 25) +    # if BMI > 25 but % reduction makes it <25 (set them to 25)              
+  (obs * (obs < 25))                  # if BMI is < 25 set as observed bmi
+}
+
+reduce_30_perc <- function(data, trt) {
+  val <- data[[trt]] - (data[[trt]]*0.3) # desired calculation
+  obs <- data[[trt]]                     # observed value
+  val * (val >= 25) +                  # 
+  (((obs >25) & (val <25)) * 25) +    # if BMI > 25 but % reduction makes it <25 (set them to 25)              
+  (obs * (obs < 25))                  # if BMI is < 25 set as observed bmi
+}
+
+```
+
+
+::: notes
+:::
+
+
 
 
 <!------------------------------------Slide 19---------------------------------->
-##  {auto-animate="true"}
+
+
+
+## [CURRENT]{.pink} WORK (Implementation) {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1"}
+
+### [MTP [Example 02- Categorical exposure]]{.blue data-id="ex1"}
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} [My Work |]{style="opacity:0.20"} My Plans
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
 :::
 :::
 
-![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
-
-::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
-[Reasearch]{.red} activities
-
-:::
-
-
-::: {.absolute style="left:-10%;top:18%;text-align:center"}
-
-
-:::
-
+![](img/ex2.png)
 
 ::: notes
 :::
 
-<!------------------------------------Slide 20---------------------------------->
-##  {auto-animate="true"}
+<!------------------------------------Slide 19---------------------------------->
+
+## [CURRENT]{.pink} WORK (Implementation) {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1" .scrollable}
+
+### [MTP [Example 03- poverty income ratio]]{.blue data-id="ex1"}
 
 ::: {.absolute top="0" right="-10%"}
 ::: {.sectionhead data-id="head"}
-[About Me \|]{style="opacity:0.20"} [My Work |]{style="opacity:0.20"} My Plans
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
 :::
 :::
 
-![](img/whatif.png){.absolute top="10%" left="0%" style="opacity: 0.1;" width="1000"}
+<center>
+:::{width="800"}
+![](img/ex3.png){width="800"}
+:::
+</center>
 
-::: {.absolute style="left:-10%;top:0%; font-weight:bold"}
-Overall [career]{.red} plans
+:::{.notes}
+
+:::
+
+<!------------------------------------Slide 20---------------------------------->
+
+## [CURRENT]{.pink} WORK (Implementation) {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1" }
+
+### [MTP - Estimator]{.blue data-id="ex1"}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+
+
+- My favorite estimation tool is **doubly-robust TMLE** becasue of its many attractive features in estimationg defined MTPs
+
+
+2. Semi-parametric 
+
+3. Can handle time-varing exposures/confounders
+
+4. Can handle censoring
+
+1. Can use machine learning algorithms to model exposure and outcome flexibly
+
+
+:::{.refs2}
+Mark J. van der Laan, Sherri Rose. Targeted Learning:Causal Inference for Observational and Experimental Data. 2011. https://doi.org/10.1007/978-1-4419-9782-1
+:::
+
+
+:::notes
 
 :::
 
 
-::: {.absolute style="left:-10%;top:18%;text-align:center"}
+<!------------------------------------Slide 20---------------------------------->
+## MY [PLANS]{.green}  {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1" }
+### [Research]{.blue}
 
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} [My Work \|]{style="opacity:0.20"} **My Plans**
+:::
+:::
+
+- Keep learning to understand causal inference more deeply in order to use their full potential within oral epidemiology.
+
+- Investigate meaningful causal questions related to oral health inequlities using good qulity longitudinal data sources.
+
+- Extending my current methods for health policy analysis.
+
+- Expanding the scope of my research activities by understanding methods such as microsimulations 
+
+- Writing good quality papers to improve my research portfolio 
+
+
+## MY [PLANS]{.green}  {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1" }
+### [Overall- Career]{.blue}
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} [My Work \|]{style="opacity:0.20"} **My Plans**
+:::
+:::
+
+- Establish myself as a leading dental public health researcher
+
+- Expand my collaborations
+
+- Get more involved in teaching/ mentoring
+
+- Write a book - a very non-technical easy to understand causal inference book for dental researchers
+
+
+:::notes
 
 :::
+
+
+# Thank you very much for the opprtunity to present my work 🙏 {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1" }
 
 
 
