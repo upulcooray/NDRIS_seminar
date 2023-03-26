@@ -565,9 +565,9 @@ ATE can be a causal estimate given;
 
 !["Reality"](img/real.png){width="200" data-id="real"}
 
-![A= 1 (counterfactual)](img/reD.png){width="200" data-id="a1"}
+![A= 1 (counterfactual)](img/red.png){width="200" data-id="a1"}
 
-![A= 0 (counterfactual)](img/BLUE.png){width="200" data-id="a0"}
+![A= 0 (counterfactual)](img/blue.png){width="200" data-id="a0"}
 :::
 
 ::: {.column width="30%" .fragment}
@@ -575,12 +575,12 @@ ATE can be a causal estimate given;
 **Unrealistic contrast/ Static interventions**
 
 
-![A= 1 ](img/reD.png){width="250" data-id="a1"}
+![A= 1 ](img/red.png){width="250" data-id="a1"}
 
 [vs]{style="padding-left:120px;"}
 
 
-![A= 0 ](img/BLUE.png){width="250" data-id="a1"}
+![A= 0 ](img/blue.png){width="250" data-id="a1"}
 :::
 
 
@@ -893,7 +893,7 @@ Mark J. van der Laan, Sherri Rose. Targeted Learning:Causal Inference for Observ
 
 - Keep learning to understand causal inference more deeply in order to use their full potential within oral epidemiology.
 
-- Investigate meaningful causal questions related to oral health inequlities using good qulity longitudinal data sources.
+- Investigate meaningful causal questions related to oral health inequalities using good quality longitudinal data sources.
 
 - Extending my current methods for health policy analysis.
 
