@@ -253,7 +253,7 @@ section.has-dark-background .fragment:not(.current-fragment)::before {
   pre
   code.has-line-highlights
   > span:not(.highlight-line) {
-  opacity: 0.1 !important;
+  opacity: 0.2 !important;
 }
 
 .reveal
@@ -409,6 +409,33 @@ ol li::before {
   font-size: 26px;
   background-color: #E69F0066;
 }
+
+
+
+.circle{
+  width:20px;
+  height:20px;
+  background:#005EB866;
+  border-radius:50%;
+  overflow:hidden;
+  margin:auto;
+  animation: circle 20s linear infinite;
+}
+
+@keyframes circle{
+  0%{
+    transform:rotate(0deg)
+              translate(-102px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-102px)
+              rotate(-360deg);
+  }
+}
+
 
 
 

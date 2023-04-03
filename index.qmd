@@ -1,5 +1,6 @@
 ---
-date: "`r format(Sys.time(), '%d-%b-%y')`"
+date: "date: 2023-04-03"
+date-format: long
 title: "Modelling *WHAT IF* questions <br>using observational data"
 author: Upul Cooray
 institute: "Department International Oral Health<br> Tohoku University, Japan"
@@ -18,7 +19,6 @@ format:
           # data-color: "#EDEEF"
       preview-links: true
       code-overflow: wrap
-      menu: false
       incremental: true
       auto-animate: true
       transition: fade
@@ -41,14 +41,19 @@ library(kableExtra)
 library(tidyverse)
 ```
 
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+
 ::: columns
-::: {.column width="25%"}
+::: {.column width="25%" }
 <center>About **ME**</center>
 
 <center>![](img/pic.png){width="200"}</center>
 :::
 
 ::: {.column width="10%"}
+
 :::
 
 ::: {.column width="65%"}
@@ -68,7 +73,33 @@ library(tidyverse)
 
 . . .
 
-[Currently work as an assistant professor at Tohoku University]{.center}
+<center>Currently work as an assistant professor at Tohoku University</center>
+
+:::notes
+Good morning everyone! Thank you very much giving me the opportunity to present today
+
+My name is upul cooray, currently i am at tohoku university in Japan
+
+let me start by briefly introducing my background
+
+I practiced clinical dentistry for about four year. For me clinical dentistry became very monotonous. usually, I like to be intellectually inactive. for me clinical practice became more of a mechanical skill with very little thinking. 
+
+So I decided to peruse something different and went to UCL to do a MSc in dental public health. by the time I start UCL I did not have any experience or knowledge in epidemiology, statistic. To be frank zero knowledge about research methods in general.  
+
+So, the UCL's MSC was life changing for me and it changed
+my whole perception of healthcare. And I started to realize the importance of social determinants,tacking inequalities, common risk factors and so on. 
+
+At that beginning I did not understand anything in the methods section most of the papers. Therefore, I took all the basic epi and statistics classes very seriously. 
+
+Anyhow, I managed to complete the MSc with a distinction and I was competent with basic methods.
+
+Then, Richard introduced me to Jun I came to Japan to do a PhD. Jun helped me to get a generous scholarship to support my stay in japan. 
+
+I completed my PhD September last year and immediately started as a Assistant professor at the same department.
+
+And Jun gave me unlimited freedom to study. 
+
+:::
 
 <!------------------------------------Slide 2---------------------------------->
 
@@ -79,6 +110,7 @@ library(tidyverse)
 **About Me** [\| My Work \| My Plans]{style="opacity:0.20"}
 :::
 :::
+
 
 ::: columns
 ::: {.column width="25%"}
@@ -97,7 +129,7 @@ library(tidyverse)
 
 -   Social determinants of health
 
--   Oral health inequalities
+-   health inequalities
 
 -   Association between oral health & general health
 
@@ -106,6 +138,12 @@ library(tidyverse)
 -   Reproducible research
 :::
 :::
+
+
+:::notes
+The research interests are based on my interest in broader concepts such as;
+:::
+
 
 <!------------------------------------Slide 3---------------------------------->
 
@@ -124,6 +162,7 @@ library(tidyverse)
 <center>![](img/pic.png){width="200"}</center>
 
 <center>[METHODS]{.purple}</center>
+
 :::
 
 ::: {.column width="10%"}
@@ -144,6 +183,22 @@ library(tidyverse)
 :::
 :::
 
+
+:::{.fragment .absolute left="5%" top="50%" }
+[⚠️]{style="font-size:5em"}
+:::
+
+
+:::notes
+In order to study those concept I like to use;
+
+[read the list]
+
+By any means I am not an expert of any of these methods. I do not have any advance training in statistics. So spoiler alert, I am not going to pretend that I understand all the math behind these methods. So my understanding of these methods is largely intuitive. I think this true for most of the researchers in our area.  I do like to understand these methods more deeply (its a work in progress)
+
+:::
+
+
 <!------------------------------------Slide 3---------------------------------->
 
 ##  {background-image="img/whatif.png" background-opacity="0.1" auto-animate="true"}
@@ -153,6 +208,7 @@ library(tidyverse)
 **About Me** [\| My Work \| My Plans]{style="opacity:0.20"}
 :::
 :::
+
 
 ::: columns
 ::: {.column width="25%"}
@@ -181,6 +237,13 @@ library(tidyverse)
 :::
 :::
 
+:::notes
+In addition to research interest I have some other interests;
+
+I love R programming and to learn programming in general
+
+:::
+
 <!------------------------------------Slide 6---------------------------------->
 
 ## [PREVIOUS]{.green} WORK {auto-animate="true"}
@@ -196,7 +259,15 @@ library(tidyverse)
 ![](img/rdabs.png){data-id="rd" width="900" height="100%"}
 
 ::: notes
-This is where my interest on econometric methods and causal inference in general sparked I think econometric methods are very good in accounting for unmeasured confounding But difficult to find data and proper use cases with epidemiological survey data, Eg: finding appropriate strong IV, Data to simulate a synthetic control
+This was my first paper. 
+
+when I first start my PhD Jun told me "he has heard about a method call regression discontinuity but not very familiar with it may be I can use it to evaluate Japanese health insurance co-payment discount policy for older adults. 
+
+This is where my interest on econometric methods and causal inference in general sparked. 
+
+We managed to publish this just after 2 years into my PhD.
+
+I think econometric methods are very good in accounting for unmeasured confounding. But it is bit difficult to find data and proper use cases with epidemiological survey data, Eg: finding appropriate strong IV, Data to simulate a synthetic control
 :::
 
 <!------------------------------------Slide 7---------------------------------->
@@ -216,7 +287,7 @@ This is where my interest on econometric methods and causal inference in general
 ![](img/rdplot.png){width="800"}
 
 ::: notes
-This is where my interest on econometric methods and causal inference in general sparked I think econometric methods are very good in accounting for unmeasured confounding But difficult to find data and proper use cases with epidemiological survey data, Eg: finding appropriate strong IV, Data to simulate a synthetic control
+In this study we investigated the effectiveness japans National health insurance co-payment policy which offers additional 10% discount when subscribers turns 70years old. here we found clear discontinuity in the participation dental attendance before after the discount eligibility
 :::
 
 <!------------------------------------Slide 8---------------------------------->
@@ -236,9 +307,9 @@ This is where my interest on econometric methods and causal inference in general
 ![](img/ml2.png){width="800"}
 
 ::: notes
-I got bored during the initial lock down period of the pandemic so I wanted to understand little bit about machine learning and started a toy project to predict tooth loss using survey data and I ended up publishing my results in SSM.
+I got bored during the initial COVID lock down period. So I wanted to understand little bit about machine learning and started a toy project to predict tooth loss using survey data and I ended up publishing my results in SSM.
 
-and then I used similar methods to work on a project with a Japanese collegeue to predict the fall risk among older adults.
+and then I used similar methods to work on a project with a Japanese collegeue to predict the fall risk among older adults. Where I contributed as the co-lead.
 :::
 
 <!------------------------------------Slide 9---------------------------------->
@@ -274,13 +345,41 @@ However, currently my workflow is exclusively based on R.
 :::
 :::
 
-<br>
+![](img/accepted.png){.absolute width="900" data-id="accepted" }
 
-![](img/accepted.png){width="900"}
-
-<br> <br>
 
 ::: notes
+Currently, my interests are mainly focused in causal inference frameworks that allow non-parametric estimators to be used.
+
+We got this paper accepted in JDR very recently and now it is in production. 
+:::
+
+
+<!------------------------------------Slide 11---------------------------------->
+## [PREVIOUS]{.purple} WORK {auto-animate="true"}
+
+### (Causal inference + TMLE + Super Learner)
+
+::: {.absolute top="0" right="-10%"}
+::: {.sectionhead data-id="head"}
+[About Me \|]{style="opacity:0.20"} **My Work** [\| My Plans]{style="opacity:0.20"}
+:::
+:::
+
+::::columns 
+:::{.column width="50%"}
+![](img/scenarios.png){width="500"}
+
+![](img/accepted-2.png){width="500" data-id="accepted"}
+:::
+
+:::{.column width="50%"}
+![](img/rrplot.png){width="500"}
+:::
+::::
+
+:::notes
+In this study we used a longitudinal modified treatment policy framework to investigate causal effect of number of teeth on social participation. I will talk about this method in details in a bit. In order to talk about modified treatment policies lets review the the intuition behind statistical models in general.
 :::
 
 <!------------------------------------Slide 11---------------------------------->
@@ -309,6 +408,7 @@ However, currently my workflow is exclusively based on R.
 </center>
 
 ::: notes
+usally we default to models based analytic approach. that is we think about possible analytic approach for the outcome variable and try to revolve our research questions around them.
 :::
 
 <!------------------------------------Slide 12---------------------------------->
@@ -465,7 +565,10 @@ tibble(i= c(paste0(1:5), "...", "n"),
 
 
 ::: notes
-no such thing as a "method for causal inference"
+In my understanding no such thing as a "method for causal inference". I think the causality is coming from framing our research question question and defining a statistical model to estimate that. SO even the simplest casusal model is what would have happen if everyone exposed vs everyone not exposed. 
+
+However, In real data given individual unit has only one of those observed. Which the fundamental problem of causal inference. in the potential outcome framework we convert this problem in to a sort of missing data problem to estimate counterfactual outcomes.
+
 :::
 
 <!-----------------------------------Slide 15---------------------------------->
@@ -544,6 +647,10 @@ ATE can be a causal estimate given;
 
 
 ::: notes
+When we have the causal model with relevant counteractions we can simply average over potential outcomes and get the difference to calculate Avereage treatment effeft gieen the positivity and unconfoundededness
+
+Basically here we convert our well defined casal question in to statistical model geven these assumption and estimate them using a appropriate estimator. So these in nothing magical about any estiamtor to make them causal inference inference. in this simple exapmle key to casual inference having a two counterfactual worlds with A=0 and A=1
+
 :::
 
 <!-----------------------------------Slide 15---------------------------------->
@@ -608,6 +715,17 @@ Think beyond ATE to minimize positivity violation and to obtain more realistic c
 
 
 ::: notes
+Then I want to discuss a little about some limitations of this conventional potentional outcome framework
+
+Here I tried to color the map of singapore. Imagine red an blue as diffent values of some exposure. when calculating ATE we forced people in all these districts to have A=1 and then A=0, but in reality given what we know about these district the probabiity of some exposure value might be zero in some of these areas. 
+
+
+Second, Wen we calculate ATE we contrast to counterfactual worlds with extream oposits of the exposure. So it is bit qustionable its importance in policy 
+
+And also, number of counterfactuals are equalent to number of categories so when you have a categorical or a coutinuous exposure estimation and interpretation becomes bit messy.
+
+So we have to thing Beyond ATE to minimise these limitaions and to improve the flexibility
+
 :::
 
 <!------------------------------------Slide 15---------------------------------->
@@ -652,6 +770,10 @@ Modified intervention
 
 
 ::: notes
+here are some alternative 
+
+Rather than just forcing everyone to some exposure 
+
 :::
 
 <!------------------------------------Slide 16---------------------------------->
@@ -677,7 +799,7 @@ A modified treatment policy (MTP) is defined as an intervention that can depend 
 
 
 :::{.fragment}
-<center>![](img/lmtp-paper.png){width="600"}</center>
+<center>![](img/lmtp-paper.png){width="700" }</center>
 :::
 
 ::: notes
@@ -843,8 +965,12 @@ reduce_30_perc <- function(data, trt) {
 </center>
 
 :::{.notes}
+so much of eveidence ralated to association between social determinants and oral health. but it is difficult for us to quantifiy how much of a disease burden that can be averted if we intervene on social determinants  
+
+Here Im using poverty income ratio from NHANES as the SES indicator.
 
 :::
+
 
 <!------------------------------------Slide 20---------------------------------->
 
@@ -927,6 +1053,13 @@ Mark J. van der Laan, Sherri Rose. Targeted Learning:Causal Inference for Observ
 
 
 # Thank you very much for the opprtunity to present my work 🙏 {auto-animate="true" background-image="img/whatif.png" background-opacity="0.1" }
+
+
+
+
+
+
+
 
 
 
